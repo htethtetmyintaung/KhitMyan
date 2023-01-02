@@ -1,0 +1,38 @@
+.bgcolor{
+    background-color: #f9c10b;
+    height: calc(100% - 96px);
+}
+.red{background-color:red;}
+
+.border{
+  border: solid black 1px;
+}
+.form-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.form-flex label{
+  width: 25%;
+}
+.title-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about_image{
+  padding-bottom: 25px;
+}
+.table_bottom tr{
+  border-bottom: 10px;
+}
+table thead th, 
+table tbody tr td {
+  text-align: center;
+}
+table tbody tr td.map iframe{
+  width: 200px;
+  height: 100px;
+}
