@@ -17,15 +17,9 @@ Auth::routes();
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(
-    [
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-    ], function(){ 
-        Route::get(LaravelLocalization::transRoute('routes.home'), function () {
-            return view('layouts.frontend');
-        }); 
-    });
+Route::get('/', [App\Http\Controllers\Frontend\FrontEndController::class, 'english']);
+Route::get('/my', [App\Http\Controllers\Frontend\FrontEndController::class, 'myanmar']);
+Route::get('/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'japan']);
 
 
 

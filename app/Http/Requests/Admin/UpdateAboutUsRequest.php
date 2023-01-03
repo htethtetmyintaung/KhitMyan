@@ -33,12 +33,12 @@ class UpdateAboutUsRequest extends FormRequest
                 'string',
                 'max:200'
             ],
-            'image_title_myan' => [
+            'image_title_my' => [
                 'required',
                 'string',
                 'max:200'
             ],
-            'image_title_jp' => [
+            'image_title_ja' => [
                 'required',
                 'string',
                 'max:200'
@@ -46,10 +46,10 @@ class UpdateAboutUsRequest extends FormRequest
             'image_description_en' => [
                 'required'
             ],
-            'image_description_myan' => [
+            'image_description_my' => [
                 'required'
             ],
-            'image_description_jp' => [
+            'image_description_ja' => [
                 'required'
             ],
             'title_en' => [
@@ -57,12 +57,12 @@ class UpdateAboutUsRequest extends FormRequest
                 'string',
                 'max:200'
             ],
-            'title_myan' => [
+            'title_my' => [
                 'required',
                 'string',
                 'max:200'
             ],
-            'title_jp' => [
+            'title_ja' => [
                 'required',
                 'string',
                 'max:200'
@@ -70,19 +70,19 @@ class UpdateAboutUsRequest extends FormRequest
             'sub_title_en' => [
                 'required'
             ],
-            'sub_title_myan' => [
+            'sub_title_my' => [
                 'required'
             ],
-            'sub_title_jp' => [
+            'sub_title_ja' => [
                 'required'
             ],
             'description_en' => [
                 'required'
             ],
-            'description_myan' => [
+            'description_my' => [
                 'required'
             ],
-            'description_jp' => [
+            'description_ja' => [
                 'required'
             ],
            

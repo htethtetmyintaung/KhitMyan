@@ -7,8 +7,8 @@
             <ul class="nav-ul">
             @foreach ($contents as $content)
                 <li class="nav-item w-100">
-                    <a href="index.html" class="nav-link click-scroll-no "  >{{ $content->title_en }}</a>
-                    <!-- <a href="index.html" class="nav-link click-scroll-no autolang"  >{{ $content->title_my }}</a> -->
+                    <!-- <a href="index.html" class="nav-link click-scroll-no "  >{{ $content->title_en }}</a> -->
+                    <a href="index.html" class="nav-link click-scroll-no "  >{{ $content->title_my }}</a>
                     <!-- <a href="index.html" class="nav-link click-scroll-no autolang"  >{{ $content->title_ja }}</a> -->
                 </li>
             @endforeach
@@ -17,13 +17,14 @@
 
         <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            English
+            Myanmar
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="{{url('/my')}}">Myanmar</a></li>
+        <li><a class="dropdown-item" href="{{url('/')}}">English</a></li>
             <li><a class="dropdown-item" href="{{url('/ja')}}">Japan</a></li>
         </ul>
         </div>
+
                 
     </div>
 </nav>

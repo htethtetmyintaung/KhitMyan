@@ -21,15 +21,15 @@
 
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="adminbody">
 
     @include('layouts.backend.admin-navbar')
 
     <div id="layoutSidenav">
 
         @include('layouts.backend.admin-sidebar')
-        <div id="layoutSidenav_content">
-            <main>
+        <div id="layoutSidenav_content" >
+            <main class="admincontents">
                 @yield('content')
             </main>
             @include('layouts.backend.admin-footer')

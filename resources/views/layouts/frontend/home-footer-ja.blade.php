@@ -7,13 +7,12 @@
             <div class="row">
 
                 <div class="col-lg-6 col-12">
-
+                @foreach ($contacts as $contact)
                     <div class="contant-us">
-                    @foreach ($contacts as $contact)
                         <div>
-                            <h3>{{ $contact->title_en }}</h3>
+                            <h3>{{ $contact->title_ja }}</h3>
                             
-                            <h5 class="mb-4">{{ $contact->address_en }}</h5>
+                            <h5 class="mb-4">{{ $contact->address_ja }}</h5>
 
                             <h4 class="mb-2">
                                 <a href="tel: 240-480-9600">
@@ -23,13 +22,12 @@
                             </h4>
 
                             <h5>
-                                <a href="#" class="footer-link">
+                                <a href="mailto:info@company.com" class="footer-link">
                                     <i class="bi-envelope-fill contact-icon me-2"></i>
                                     {{ $contact->email }}
                                 </a>
                             </h5>
                         </div>
-                    @endforeach
                         <div class="site-footer-wrap d-flex align-items-center">
 
                             <ul class="social-icon">
@@ -44,6 +42,7 @@
                             
                         </div> 
                     </div>
+                @endforeach
                 </div>
 
                 <div class="col-lg-6 col-12">

@@ -11711,6 +11711,10 @@ body {
   margin-left: 5px;
 }
 
+.padding-0 {
+  padding: 0;
+}
+
 .text-align-center {
   text-align: center;
 }
@@ -11884,4 +11888,23 @@ backface-visibility: hidden;
 -webkit-backface-visibility: hidden;
 -moz-backface-visibility: hidden;
 -ms-backface-visibility: hidden;
+}
+
+.adminbody{
+  overflow: hidden;
+}
+.admincontents{
+  position: absolute;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+}
+.tablescroll{
+  overflow: auto;
+}
+
+.custom-btn {
+  background-color: #dc3545;
+  border-radius: 100px;
+  color: #fff;
 }

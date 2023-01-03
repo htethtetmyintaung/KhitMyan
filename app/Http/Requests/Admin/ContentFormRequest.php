@@ -29,12 +29,12 @@ class ContentFormRequest extends FormRequest
                 'string',
                 'max:200'
             ],
-            'title_myan' => [
+            'title_my' => [
                 'required',
                 'string',
                 'max:200'
             ],
-            'title_jp' => [
+            'title_ja' => [
                 'required',
                 'string',
                 'max:200'

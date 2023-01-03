@@ -28,13 +28,22 @@ class ContactUsRequest extends FormRequest
                 'nullable',
                 'integer'
             ],
+            'title_en' => [
+                'required'
+            ],
+            'title_my' => [
+                'required'
+            ],
+            'title_ja' => [
+                'required'
+            ],
             'address_en' => [
                 'required'
             ],
-            'address_myan' => [
+            'address_my' => [
                 'required'
             ],
-            'address_jp' => [
+            'address_ja' => [
                 'required'
             ],
             'phone' => [

@@ -20,11 +20,12 @@
 
     <div >
 
-        @include('layouts.frontend.navbar')
+        @include('layouts.frontend.navbar-ja')
             <main>
                 @yield('content')
+
+                @include('layouts.frontend.home-footer-ja')
             </main>
-            @include('layouts.frontend.home-footer')
     </div>
         <!-- JAVASCRIPT FILES -->
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>

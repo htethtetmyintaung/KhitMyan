@@ -36,20 +36,20 @@ class HomeFormRequest extends FormRequest
             'banner_text_en' => [
                 'required'
             ],
-            'small_text_myan' => [
+            'small_text_my' => [
                 'required',
                 'string',
                 'max:200'
             ],
-            'banner_text_myan' => [
+            'banner_text_my' => [
                 'required'
             ],
-            'small_text_jp' => [
+            'small_text_ja' => [
                 'required',
                 'string',
                 'max:200'
             ],
-            'banner_text_jp' => [
+            'banner_text_ja' => [
                 'required'
             ],
             'image' => [

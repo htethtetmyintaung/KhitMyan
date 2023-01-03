@@ -30,6 +30,9 @@ class ContactusController extends Controller
         $data = $request->validated();
         $content = new ContactUs;
         $content->main_content_id = $data['main_content_id'];
+        $content->title_en = $data['title_en'];
+        $content->title_my = $data['title_my'];
+        $content->title_ja = $data['title_ja'];
         $content->address_en = $data['address_en'];
         $content->address_my = $data['address_my'];
         $content->address_ja = $data['address_ja'];
@@ -52,6 +55,9 @@ class ContactusController extends Controller
     {
         $data = $request->validated();
         $content = ContactUs::find($content_id);
+        $content->title_en = $data['title_en'];
+        $content->title_my = $data['title_my'];
+        $content->title_ja = $data['title_ja'];
         $content->address_en = $data['address_en'];
         $content->address_my = $data['address_my'];
         $content->address_ja = $data['address_ja'];
