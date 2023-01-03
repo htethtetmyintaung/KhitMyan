@@ -20,6 +20,9 @@ Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->nam
 Route::get('/', [App\Http\Controllers\Frontend\FrontEndController::class, 'english']);
 Route::get('/my', [App\Http\Controllers\Frontend\FrontEndController::class, 'myanmar']);
 Route::get('/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'japan']);
+Route::get('/about', [App\Http\Controllers\Frontend\FrontEndController::class, 'about']);
+Route::get('/about/my', [App\Http\Controllers\Frontend\FrontEndController::class, 'about_my']);
+Route::get('/about/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'about_ja']);
 
 
 

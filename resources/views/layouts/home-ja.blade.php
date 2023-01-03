@@ -20,11 +20,11 @@
 
     <div >
 
-        @include('layouts.frontend.navbar-ja')
+        @include('layouts.frontend.main.navbar-ja')
             <main>
                 @yield('content')
 
-                @include('layouts.frontend.home-footer-ja')
+                @include('layouts.frontend.main.home-footer-ja')
             </main>
     </div>
         <!-- JAVASCRIPT FILES -->

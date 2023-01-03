@@ -7,24 +7,24 @@
             <div class="row">
 
                 <div class="col-lg-6 col-12">
-                @foreach ($contacts as $contact)
+               
                     <div class="contant-us">
                         <div>
-                            <h3>{{ $contact->title_ja }}</h3>
+                            <h3>{{ $contacts->title_ja }}</h3>
                             
-                            <h5 class="mb-4">{{ $contact->address_ja }}</h5>
+                            <h5 class="mb-4">{{ $contacts->address_ja }}</h5>
 
                             <h4 class="mb-2">
                                 <a href="tel: 240-480-9600">
                                     <i class="bi-telephone contact-icon me-2"></i>
-                                    {{ $contact->phone }}
+                                    {{ $contacts->phone }}
                                 </a>
                             </h4>
 
                             <h5>
                                 <a href="mailto:info@company.com" class="footer-link">
                                     <i class="bi-envelope-fill contact-icon me-2"></i>
-                                    {{ $contact->email }}
+                                    {{ $contacts->email }}
                                 </a>
                             </h5>
                         </div>
@@ -42,7 +42,7 @@
                             
                         </div> 
                     </div>
-                @endforeach
+               
                 </div>
 
                 <div class="col-lg-6 col-12">

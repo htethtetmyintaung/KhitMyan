@@ -18,20 +18,18 @@
     
     <body id="section_1">
 
-    <div >
 
-        @include('layouts.frontend.navbar-my')
-            <main>
+        @include('layouts.frontend.about.navbar')
+            <main class="main-height">
                 @yield('content')
 
-                @include('layouts.frontend.home-footer-my')
             </main>
-    </div>
+        @include('layouts.frontend.about.detail-footer')
+            
+ 
         <!-- JAVASCRIPT FILES -->
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('assets/js/jquery.sticky.js') }}"></script>
-        <script src="{{ asset('assets/js/custom.js') }}"></script>
 
     </body>
 </html>

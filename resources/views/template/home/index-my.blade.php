@@ -1,4 +1,4 @@
-@extends('layouts.frontend-my')
+@extends('layouts.home-my')
 
 @section('title','Khit Myan')
 
@@ -45,18 +45,18 @@
 
     <section class="about section-padding" id="section_2">
         <div class="container">
-        @foreach ($about_contents as $about_content)
+        
             <div class="row">
 
                 <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                     
                     <div class="about-image-wrap h-100">
-                        <img src="{{ asset('uploads/aboutus/'.$about_content->image) }}" class="img-fluid about-image" alt="">
+                        <img src="{{ asset('uploads/aboutus/'.$about_contents->image) }}" class="img-fluid about-image" alt="">
 
                         <div class="about-image-info">
-                            <h4 class="text-white">{{ $about_content->image_title_my }}</h4>
+                            <h4 class="text-white">{{ $about_contents->image_title_my }}</h4>
 
-                            <p class="text-white mb-0">{{ $about_content->image_description_my }}</p>
+                            <p class="text-white mb-0">{{ $about_contents->image_description_my }}</p>
                         </div>
                     </div>
 
@@ -67,14 +67,14 @@
                         
                         <div class="about-info">
 
-                            <h2 class="mb-3">{{ $about_content->title_my }}</h2>
+                            <h2 class="mb-3">{{ $about_contents->title_my }}</h2>
 
-                            <h5 class="mb-3">{{ $about_content->sub_title_my }}</h5>
+                            <h5 class="mb-3">{{ $about_contents->sub_title_my }}</h5>
 
-                            <p>{{ $about_content->description_my }}</p>
+                            <p>{{ $about_contents->description_my }}</p>
                         </div>
                         <div class="projects-btn-wrap mt-4 seemore">
-                            <a href="#">
+                            <a href="{{url('/about/my')}}">
                                 <span class="custom-btn btn ">
                                 ပိုမိုကြည့်ရှုရန်<i class="bi-arrow-right"></i>
                                 </span>
@@ -86,7 +86,7 @@
                 </div>
 
             </div>
-        @endforeach
+        
         </div>
     </section>
 
