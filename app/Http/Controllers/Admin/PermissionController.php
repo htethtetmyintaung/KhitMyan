@@ -30,4 +30,36 @@ class PermissionController extends Controller
 
         return redirect('admin/Permissions/index')->with('message','Main Content Added Successfully');
     }
+
+    Public function edit($content_id)
+    {
+        $permissions = Permission::find($content_id);
+        return view('admin.Permissions.edit',compact('permissions'));
+    }
+
+    Public function update(PermissionRequest $request,$content_id)
+    {
+        $data = $request->validated();
+        $permission = Permission::find($content_id);
+        $permission->name = $data['permission'];
+        $permission->created_by = Auth::user()->id;
+        $permission->update();
+
+        return redirect('admin/Permissions/index')->with('message','Main Content Updated Successfully');
+    }
+
+    Public function destroy($content_id)
+    {
+        $content = Permission::find($content_id);
+        if ($content) 
+        {
+            $content->role()->detach();
+            $content->delete();
+            return redirect('admin/Permissions/index')->with('message','Content Deleted Successfully');
+        }
+        else
+        {
+            return redirect('admin/Permissions/index')->with('message','No Content Id Found');
+        }
+    }
 }

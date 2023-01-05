@@ -60,6 +60,9 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
     Route::get('/Permissions/index',[App\Http\Controllers\Admin\PermissionController::class,'index']);
     Route::get('/Permissions/add-content',[App\Http\Controllers\Admin\PermissionController::class,'create']);
     Route::post('/Permissions/add-content',[App\Http\Controllers\Admin\PermissionController::class,'store']);
+    Route::get('/Permissions/edit-content/{content_id}',[App\Http\Controllers\Admin\PermissionController::class,'edit']);
+    Route::put('/Permissions/update-content/{content_id}',[App\Http\Controllers\Admin\PermissionController::class,'update']);
+    Route::get('/Permissions/delete-content/{content_id}',[App\Http\Controllers\Admin\PermissionController::class,'destroy']);
 
     Route::get('/Roles/index',[App\Http\Controllers\Admin\RoleController::class,'index']);
     Route::get('/Roles/add-content',[App\Http\Controllers\Admin\RoleController::class,'create']);

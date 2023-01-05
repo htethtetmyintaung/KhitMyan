@@ -30,8 +30,8 @@
                     <td scope="row">{{++$key}}</td>
                     <td>{{$permission->name}}</td>
                     <td>{{$permission->created_at}}</td>
-                    <td><a href="#" class="btn btn-success">Edit</a></td>
-                    <td><a href="#" class="btn btn-danger">Delete</a></td>
+                    <td><a href="{{url('admin/Permissions/edit-content/'.$permission->id)}}" class="btn btn-success">Edit</a></td>
+                    <td><a href="{{url('admin/Permissions/delete-content/'.$permission->id)}}" class="btn btn-danger">Delete</a></td>
                 </tr>
             @endforeach
             </tbody>
