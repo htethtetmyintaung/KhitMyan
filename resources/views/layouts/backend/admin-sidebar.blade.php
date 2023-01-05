@@ -3,10 +3,10 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <!-- <div class="sb-sidenav-menu-heading">Core</div> -->
-                <a class="nav-link" href="<?php echo url('admin/dashboard')?>">
+                <!-- <a class="nav-link" href="<?php echo url('admin/dashboard')?>">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
-                </a>
+                </a> -->
                 <a class="nav-link" href="<?php echo url('admin/Maincontents/index')?>">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Main Contents
@@ -60,7 +60,7 @@
                     </nav>
                 </div>
                 
-                <div class="sb-sidenav-menu-heading">Addons</div>
+                <!-- <div class="sb-sidenav-menu-heading">Addons</div> -->
                 <a class="nav-link" href="#">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     EVENTS
@@ -69,6 +69,23 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     CONTACT US
                 </a>
+
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts-user" aria-expanded="false" aria-controls="collapseLayouts-user">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    USER MANAGEMENT
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseLayouts-user" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="<?php echo url('admin/Users/index')?>">Users</a>
+                    </nav>
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="<?php echo url('admin/Roles/index')?>">Role</a>
+                    </nav>
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="<?php echo url('admin/Permissions/index')?>">Permission</a>
+                    </nav>
+                </div>
             </div>
         </div>
         <!-- <div class="sb-sidenav-footer">

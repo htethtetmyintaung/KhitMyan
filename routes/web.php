@@ -57,4 +57,14 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
     Route::put('/Contactus/update-content/{content_id}',[App\Http\Controllers\Admin\ContactusController::class,'update']);
     Route::get('/Contactus/delete-content/{content_id}',[App\Http\Controllers\Admin\ContactusController::class,'destroy']);
 
+    Route::get('/Permissions/index',[App\Http\Controllers\Admin\PermissionController::class,'index']);
+    Route::get('/Permissions/add-content',[App\Http\Controllers\Admin\PermissionController::class,'create']);
+    Route::post('/Permissions/add-content',[App\Http\Controllers\Admin\PermissionController::class,'store']);
+
+    Route::get('/Roles/index',[App\Http\Controllers\Admin\RoleController::class,'index']);
+    Route::get('/Roles/add-content',[App\Http\Controllers\Admin\RoleController::class,'create']);
+    Route::post('/Roles/add-content',[App\Http\Controllers\Admin\RoleController::class,'store']);
+
+    Route::get('/Users/index',[App\Http\Controllers\Admin\UserController::class,'index']);
+    Route::get('/Users/add-content',[App\Http\Controllers\Admin\UserController::class,'create']);
 });

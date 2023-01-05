@@ -22,7 +22,7 @@
                             </div>
 
                             <div class="carousel-image-wrap">
-                                <img src="{{ asset('uploads/home/'.$home_content->image) }}" class="img-fluid carousel-image" alt="">
+                                <!-- <img src="{{ asset('uploads/home/'.$home_content->image) }}" class="img-fluid carousel-image" alt=""> -->
                             </div>
                         </li>
                     @endforeach
@@ -45,18 +45,18 @@
 
     <section class="about section-padding" id="section_2">
         <div class="container">
-        
+            @foreach ($about_contents as $about_content)
             <div class="row">
 
                 <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                     
                     <div class="about-image-wrap h-100">
-                        <img src="{{ asset('uploads/aboutus/'.$about_contents->image) }}" class="img-fluid about-image" alt="">
+                        <img src="{{ asset('uploads/aboutus/'.$about_content->image) }}" class="img-fluid about-image" alt="">
 
                         <div class="about-image-info">
-                            <h4 class="text-white">{{ $about_contents->image_title_en }}</h4>
+                            <h4 class="text-white">{{ $about_content->image_title_en }}</h4>
 
-                            <p class="text-white mb-0">{{ $about_contents->image_description_en }}</p>
+                            <p class="text-white mb-0">{{ $about_content->image_description_en }}</p>
                         </div>
                     </div>
 
@@ -67,11 +67,11 @@
                         
                         <div class="about-info">
 
-                            <h2 class="mb-3">{{ $about_contents->title_en }}</h2>
+                            <h2 class="mb-3">{{ $about_content->title_en }}</h2>
 
-                            <h5 class="mb-3">{{ $about_contents->sub_title_en }}</h5>
+                            <h5 class="mb-3">{{ $about_content->sub_title_en }}</h5>
 
-                            <p>{{ $about_contents->description_en }}</p>
+                            <p>{{ $about_content->description_en }}</p>
                         </div>
                         <div class="projects-btn-wrap mt-4 seemore">
                             <a href="{{url('/about')}}">
@@ -86,7 +86,7 @@
                 </div>
 
             </div>
-       
+            @endforeach
         </div>
     </section>
 

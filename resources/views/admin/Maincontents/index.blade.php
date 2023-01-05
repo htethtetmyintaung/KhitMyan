@@ -28,7 +28,7 @@
             <tbody>
             @foreach ($contents as $key=>$content)
                 <tr>
-                    <th scope="row">{{ ++$key }}</th>
+                    <td scope="row">{{ ++$key }}</td>
                     <td>{{ $content->title_en }}</td>
                     <td>{{ $content->title_my }}</td>
                     <td>{{ $content->title_ja }}</td>   

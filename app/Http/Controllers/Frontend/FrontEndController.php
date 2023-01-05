@@ -15,8 +15,8 @@ class FrontEndController extends Controller
     {
         $contents = Maincontents::all();
         $home_contents = Homecontents::all();
-        $about_contents = AboutUs::first();
-        $contacts = ContactUs::first();
+        $about_contents = AboutUs::all();
+        $contacts = ContactUs::all();
         return view('template.home.index', compact('contents','contacts','home_contents','about_contents'));
     }
 

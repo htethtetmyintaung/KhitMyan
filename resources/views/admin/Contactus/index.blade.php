@@ -41,7 +41,7 @@
                 <tbody>
                 @foreach($contents as $content)
                 <tr>
-                    <th scope="row">{{$content->id}}</th>
+                    <td scope="row">{{$content->id}}</td>
                     <td>{{$content->title_en}}</td>
                     <td>{{$content->title_my}}</td>
                     <td>{{$content->title_ja}}</td>

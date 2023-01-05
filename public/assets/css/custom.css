@@ -13,6 +13,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 40px;
+  padding-left: 0;
 }
 .form-flex label{
   width: 25%;
@@ -35,4 +36,12 @@ table tbody tr td {
 table tbody tr td.map iframe{
   width: 200px;
   height: 100px;
+}
+.permision-list {
+  list-style: none;
+  display: block;
+  width: 100%;
+}
+.permission-name {
+  list-style: none;
 }
