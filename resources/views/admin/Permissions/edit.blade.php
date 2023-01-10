@@ -7,7 +7,7 @@
     <div class="container-fluid px-4">
         <div class='title-flex'>
         <h1 class="mt-4">Edit Permission</h1>
-        <a href="#" class='btn btn-primary'>Go to Back</a>
+        <a href="{{url('admin/Permissions/index')}}" class='btn btn-primary'>Go to Back</a>
         </div>
 
         @if($errors->any())
@@ -23,9 +23,13 @@
         @method('PUT')
             <div class="form-group form-flex">
                 <label for="basicEmailInput">Name</label>
-                <input class="form-control" type="text" name="permission" value="{{$permissions->name}}" id="basicEmailInput" placeholder="">
+                <input class="form-control" type="text" name="permission" value="{{ old('name',$permissions->name) }}" id="basicEmailInput" placeholder="">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-group form-flex">
+                <label for="basicEmailInput">Description</label>
+                <textarea class="w-100" name="description" id="" cols="30" rows="5">{{old('description',$permissions->description)}}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
 

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use App\Models\Role;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +12,7 @@ class Permission extends Model
 
     protected $fillable = [
         'name',
+        'description',
         'created_by'
     ];
 
@@ -18,6 +20,7 @@ class Permission extends Model
     {
         return $this->belongsToMany(Role::class, 'permissions_roles','permission_id','role_id');
     }
+
 }
 
 

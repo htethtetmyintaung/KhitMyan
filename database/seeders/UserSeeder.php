@@ -3,10 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
-use App\Models\User;
 
 class UserSeeder extends Seeder
 {
@@ -15,19 +11,19 @@ class UserSeeder extends Seeder
      *
      * @return void
      */
+  
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'Ttaye',
+            'name' => 'TTAYE',
             'email' => 'ttaye@gmail.com',
-            'password' => Hash::make('ttaye123'),
-            'role' => '1',
+            'password' => 'ttaye123!',
         ]);
 
         User::factory()
-            ->count(50)
-            ->hasPosts(1)
-            ->create();
+        ->count(50)
+        ->hasPosts(1)
+        ->create();
 
         $this->call([
             UserSeeder::class,
@@ -35,4 +31,5 @@ class UserSeeder extends Seeder
             CommentSeeder::class,
         ]);
     }
+    
 }

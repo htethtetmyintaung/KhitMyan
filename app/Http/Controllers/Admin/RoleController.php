@@ -30,11 +30,54 @@ class RoleController extends Controller
         $data = $request->validated();
         $role = new Role;
         $role->name = $data['role'];
-        $role->created_by = Auth::user()->id;
+        $role->created_by = Auth::user()->name;
         $role->save();
 
         $role->permission()->attach($request->permission);
 
-        return redirect('admin/Roles/index')->with('message','Main Content Added Successfully');
+        return redirect('admin/Roles/index')->with('message','Content Added Successfully');
+    }
+
+    Public function edit($content_id)
+    {
+        $roles = Role::find($content_id);
+        $permissions = Permission::all();
+        return view('admin.Roles.edit',compact('roles','permissions'));
+    }
+
+    Public function update(RoleRequest $request,$content_id)
+    {
+        $data = $request->validated();
+        $role = Role::find($content_id);
+        $role->name = $data['role'];
+        $role->created_by = Auth::user()->name;
+        $role->update();
+
+        $role->permission()->sync($request->permission);
+
+        return redirect('admin/Roles/index')->with('message','Content Updated Successfully');
+    }
+
+    Public function destroy($content_id)
+    {
+        
+        $content = Role::find($content_id);
+        if ($content) 
+        {
+            $content->permission()->detach();
+            $content->delete();
+            return redirect('admin/Roles/index')->with('message','Content Deleted Successfully');
+        }
+        else
+        {
+            return redirect('admin/Roles/index')->with('message','No Content Id Found');
+        }
+    }
+
+    Public function show($content_id)
+    {
+        $roles = Role::find($content_id);
+        $permissions = Permission::all();
+        return view('admin.Roles.view',compact('roles','permissions'));
     }
 }

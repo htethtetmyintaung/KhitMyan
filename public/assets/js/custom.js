@@ -38,7 +38,21 @@
   }
   });
 
-  //languges
+  //Summernote
+ 
+  $(function() {
+    $("#makeMeSummernote").summernote();
+    $("button#btnToggleStyle").on("click", function(e) {
+      e.preventDefault();
+      var styleEle = $("style#fixed");
+      if (styleEle.length == 0)
+        $("<style id=\"fixed\">.note-editor .dropdown-toggle::after { all: unset; } .note-editor .note-dropdown-menu { box-sizing: content-box; } .note-editor .note-modal-footer { box-sizing: content-box; }</style>")
+        .prependTo("body");
+      else
+        styleEle.remove();
+    })
+  })
+ 
  
 
   })(window.jQuery);

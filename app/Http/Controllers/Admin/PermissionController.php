@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\Admin\PermissionRequest;
 use App\Http\Controllers\Controller;
 use App\Models\Permission;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,10 +26,11 @@ class PermissionController extends Controller
         $data = $request->validated();
         $permission = new Permission;
         $permission->name = $data['permission'];
-        $permission->created_by = Auth::user()->id;
+        $permission->description = $data['description'];
+        $permission->created_by = Auth::user()->name;
         $permission->save();
 
-        return redirect('admin/Permissions/index')->with('message','Main Content Added Successfully');
+        return redirect('admin/Permissions/index')->with('message','Content Added Successfully');
     }
 
     Public function edit($content_id)
@@ -42,10 +44,11 @@ class PermissionController extends Controller
         $data = $request->validated();
         $permission = Permission::find($content_id);
         $permission->name = $data['permission'];
+        $permission->description = $data['description'];
         $permission->created_by = Auth::user()->id;
         $permission->update();
 
-        return redirect('admin/Permissions/index')->with('message','Main Content Updated Successfully');
+        return redirect('admin/Permissions/index')->with('message','Content Updated Successfully');
     }
 
     Public function destroy($content_id)
@@ -61,5 +64,11 @@ class PermissionController extends Controller
         {
             return redirect('admin/Permissions/index')->with('message','No Content Id Found');
         }
+    }
+
+    Public function show($content_id)
+    {
+        $permissions = Permission::find($content_id);
+        return view('admin.Permissions.view',compact('permissions'));
     }
 }

@@ -21,21 +21,27 @@
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Role</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
+                <th scope="col" colspan="3">Action</th>
                 </tr>
             </thead>
             <tbody>
-            
+            @foreach($users as $key=>$user)
                 <tr>
-                    <td scope="row">1</td>
-                    <td scope="row">HHMA</td>
-                    <td>hhma@gmail.com</td>
-                    <td>Admin</td>
-                    <td><a href="#" class="btn btn-success">Edit</a></td>
-                    <td><a href="#" class="btn btn-danger">Delete</a></td>
+                    <td scope="row">{{++$key}}</td>
+                    <td scope="row">{{$user->name}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>
+                        <ul class="permission-name">
+                        @foreach($user->user_role as $role)
+                            <li>{{$role->name}}</li>
+                            @endforeach
+                        </ul>
+                    </td>
+                    <td><a href="{{url('admin/Users/show-content/'.$user->id)}}" class="btn btn-success">View</a></td>
+                    <td><a href="{{url('admin/Users/edit-content/'.$user->id)}}" class="btn btn-success">Edit</a></td>
+                    <td><a href="{{url('admin/Users/delete-content/'.$user->id)}}" class="btn btn-danger">Delete</a></td>
                 </tr>
-           
+            @endforeach
             </tbody>
         </table>
     </div>

@@ -8,7 +8,7 @@
 
                 <div class="col-lg-6 col-12">
 
-                    <div class="contant-us">
+                    {{--<div class="contant-us">
                         @foreach ($contacts as $contact)
                         <div>
                             <h3>{{ $contact->title_en }}</h3>
@@ -43,7 +43,7 @@
                             </ul>
                             
                         </div> 
-                    </div>
+                    </div>--}}
                 </div>
 
                 <div class="col-lg-6 col-12">

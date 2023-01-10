@@ -44,4 +44,6 @@ table tbody tr td.map iframe{
 }
 .permission-name {
   list-style: none;
+  padding: 0;
+  text-align: left;
 }

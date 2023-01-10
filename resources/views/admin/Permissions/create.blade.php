@@ -21,10 +21,14 @@
         <form action="{{ url('admin/Permissions/add-content') }}" method="POST" enctype="multipart/form-data">
         @csrf    
         <div class="form-group form-flex">
-                <label for="basicEmailInput">Name</label>
-                <input class="form-control" type="text" name="permission" id="basicEmailInput" placeholder="">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <label for="basicEmailInput">Name</label>
+            <input class="form-control" type="text" name="permission" id="basicEmailInput" placeholder="">
+        </div>
+        <div class="form-group form-flex">
+            <label for="basicEmailInput">Description</label>
+            <textarea class="w-100" name="description" id="" cols="30" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 

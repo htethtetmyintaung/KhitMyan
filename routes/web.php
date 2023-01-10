@@ -26,7 +26,7 @@ Route::get('/about/ja', [App\Http\Controllers\Frontend\FrontEndController::class
 
 
 
-Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
+Route::prefix('admin')->middleware(['auth'])->group(function() {
     Route::get('/dashboard',[App\Http\Controllers\Admin\DashboardController::class,'index']);
 
     Route::get('/Maincontents/index',[App\Http\Controllers\Admin\MaincontentsController::class,'index']);
@@ -63,11 +63,22 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
     Route::get('/Permissions/edit-content/{content_id}',[App\Http\Controllers\Admin\PermissionController::class,'edit']);
     Route::put('/Permissions/update-content/{content_id}',[App\Http\Controllers\Admin\PermissionController::class,'update']);
     Route::get('/Permissions/delete-content/{content_id}',[App\Http\Controllers\Admin\PermissionController::class,'destroy']);
+    Route::get('/Permissions/show-content/{content_id}',[App\Http\Controllers\Admin\PermissionController::class,'show']);
 
     Route::get('/Roles/index',[App\Http\Controllers\Admin\RoleController::class,'index']);
     Route::get('/Roles/add-content',[App\Http\Controllers\Admin\RoleController::class,'create']);
     Route::post('/Roles/add-content',[App\Http\Controllers\Admin\RoleController::class,'store']);
+    Route::get('/Roles/edit-content/{content_id}',[App\Http\Controllers\Admin\RoleController::class,'edit']);
+    Route::put('/Roles/update-content/{content_id}',[App\Http\Controllers\Admin\RoleController::class,'update']);
+    Route::get('/Roles/delete-content/{content_id}',[App\Http\Controllers\Admin\RoleController::class,'destroy']);
+    Route::get('/Roles/show-content/{content_id}',[App\Http\Controllers\Admin\RoleController::class,'show']);
 
     Route::get('/Users/index',[App\Http\Controllers\Admin\UserController::class,'index']);
     Route::get('/Users/add-content',[App\Http\Controllers\Admin\UserController::class,'create']);
+    Route::post('/Users/add-content',[App\Http\Controllers\Admin\UserController::class,'store']);
+    Route::get('/Users/edit-content/{content_id}',[App\Http\Controllers\Admin\UserController::class,'edit']);
+    Route::put('/Users/update-content/{content_id}',[App\Http\Controllers\Admin\UserController::class,'update']);
+    Route::get('/Users/delete-content/{content_id}',[App\Http\Controllers\Admin\UserController::class,'destroy']);
+    Route::get('/Users/show-content/{content_id}',[App\Http\Controllers\Admin\UserController::class,'show']);
+    
 });

@@ -21,8 +21,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Permissions</th>
                 <th scope="col">Created at</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
+                <th scope="col" colspan="3">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,8 +37,9 @@
                         </ul>
                     </td>
                     <td>{{$role->created_at}}</td>
-                    <td><a href="#" class="btn btn-success">Edit</a></td>
-                    <td><a href="#" class="btn btn-danger">Delete</a></td>
+                    <td><a href="{{url('admin/Roles/show-content/'.$role->id)}}" class="btn btn-success">View</a></td>
+                    <td><a href="{{url('admin/Roles/edit-content/'.$role->id)}}" class="btn btn-success">Edit</a></td>
+                    <td><a href="{{url('admin/Roles/delete-content/'.$role->id)}}" class="btn btn-danger">Delete</a></td>
                 </tr>
                 @endforeach
             </tbody>
