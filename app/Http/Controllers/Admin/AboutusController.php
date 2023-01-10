@@ -118,4 +118,10 @@ class AboutusController extends Controller
             return redirect('admin/Aboutus/index')->with('message','No About Us Content Id Found');
         }
     }
+
+    Public function show($content_id)
+    {
+        $content = AboutUs::find($content_id);
+        return view('admin.Aboutus.view',compact('content'));
+    }
 }

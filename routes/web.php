@@ -42,6 +42,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function() {
     Route::get('/Home/edit-content/{content_id}',[App\Http\Controllers\Admin\HomeController::class,'edit']);
     Route::put('/Home/update-content/{content_id}',[App\Http\Controllers\Admin\HomeController::class,'update']);
     Route::get('/Home/delete-content/{content_id}',[App\Http\Controllers\Admin\HomeController::class,'destroy']);
+    Route::get('/Home/show-content/{content_id}',[App\Http\Controllers\Admin\HomeController::class,'show']);
 
     Route::get('/Aboutus/index',[App\Http\Controllers\Admin\AboutusController::class,'index']);
     Route::get('/Aboutus/add-content',[App\Http\Controllers\Admin\AboutusController::class,'create']);
@@ -49,6 +50,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function() {
     Route::get('/Aboutus/edit-content/{content_id}',[App\Http\Controllers\Admin\AboutusController::class,'edit']);
     Route::put('/Aboutus/update-content/{content_id}',[App\Http\Controllers\Admin\AboutusController::class,'update']);
     Route::get('/Aboutus/delete-content/{content_id}',[App\Http\Controllers\Admin\AboutusController::class,'destroy']);
+    Route::get('/Aboutus/show-content/{content_id}',[App\Http\Controllers\Admin\AboutusController::class,'show']);
 
     Route::get('/Contactus/index',[App\Http\Controllers\Admin\ContactusController::class,'index']);
     Route::get('/Contactus/add-content',[App\Http\Controllers\Admin\ContactusController::class,'create']);
@@ -56,6 +58,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function() {
     Route::get('/Contactus/edit-content/{content_id}',[App\Http\Controllers\Admin\ContactusController::class,'edit']);
     Route::put('/Contactus/update-content/{content_id}',[App\Http\Controllers\Admin\ContactusController::class,'update']);
     Route::get('/Contactus/delete-content/{content_id}',[App\Http\Controllers\Admin\ContactusController::class,'destroy']);
+    Route::get('/Contactus/show-content/{content_id}',[App\Http\Controllers\Admin\ContactusController::class,'show']);
 
     Route::get('/Permissions/index',[App\Http\Controllers\Admin\PermissionController::class,'index']);
     Route::get('/Permissions/add-content',[App\Http\Controllers\Admin\PermissionController::class,'create']);

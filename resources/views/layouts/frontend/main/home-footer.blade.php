@@ -8,28 +8,28 @@
 
                 <div class="col-lg-6 col-12">
 
-                    {{--<div class="contant-us">
-                        @foreach ($contacts as $contact)
+                    <div class="contant-us">
+                       
                         <div>
-                            <h3>{{ $contact->title_en }}</h3>
+                            <h3>{{ $contacts->title_en }}</h3>
                             
-                            <h5 class="mb-4">{{ $contact->address_en }}</h5>
+                            <h5 class="mb-4">{{ $contacts->address_en }}</h5>
 
                             <h4 class="mb-2">
                                 <a href="tel: 240-480-9600">
                                     <i class="bi-telephone contact-icon me-2"></i>
-                                    {{ $contact->phone }}
+                                    {{ $contacts->phone }}
                                 </a>
                             </h4>
 
                             <h5>
                                 <a href="#" class="footer-link">
                                     <i class="bi-envelope-fill contact-icon me-2"></i>
-                                    {{ $contact->email }}
+                                    {{ $contacts->email }}
                                 </a>
                             </h5>
                         </div>
-                        @endforeach
+                     
                         <div class="site-footer-wrap d-flex align-items-center">
 
                             <ul class="social-icon">
@@ -43,7 +43,7 @@
                             </ul>
                             
                         </div> 
-                    </div>--}}
+                    </div>
                 </div>
 
                 <div class="col-lg-6 col-12">

@@ -19,57 +19,37 @@
                 <thead class="table_bottom">
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Image</th>
-                        <th scope="col" colspan="3">Image Description</th>
-                        <th scope="col" colspan="3">About Us Description</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
+                        <th scope="col" colspan="3">Description</th>
+                        <th scope="col">Action</th>
                     </tr>
                     <tr>
-                        <th scope="col" colspan="2"></th>
+                        <th scope="col" ></th>
                         <th scope="col">English</th>
                         <th scope="col">Myanmar</th>
                         <th scope="col">Japan</th>
-                        <th scope="col">English</th>
-                        <th scope="col">Myanmar</th>
-                        <th scope="col">Japan</th>
-                        <th scope="col" colspan="2"></th>
+                        <th scope="col" ></th>
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($contents as $content)
+                @foreach($contents as $key=>$content)
                     <tr>
-                        <td scope="row">{{ $content->id }}</td>
-                        <td><img src="{{ asset('uploads/aboutus/'.$content->image) }}" width="100px" height="50px" alt="banner" srcset=""></td>
+                        <td scope="row">{{ ++$key }}</td>
                         <td>
-                            <span>{{ $content->image_title_en }}</span>
-                            <p>{{ $content->image_description_en }}</p>
+                            <p>{!! \Illuminate\Support\Str::words($content->description_en, 5,'....')  !!}</p>
                         </td>
                         <td>
-                            <span>{{ $content->image_title_myan }}</span>
-                            <p>{{ $content->image_description_myan }}</p>
+                            <p>{!! \Illuminate\Support\Str::words($content->description_my, 5,'....')  !!}</p>
                         </td>
                         <td>
-                            <span>{{ $content->image_title_jp }}</span>
-                            <p>{{ $content->image_description_jp }}</p>
+                            <p>{!! \Illuminate\Support\Str::words($content->description_ja, 5,'....')  !!}</p>
                         </td>
                         <td>
-                            <span>{{ $content->title_en }}</span>
-                            <p>{{ $content->sub_title_en }}</p>
-                            <p>{{ $content->description_en }}</p>
+                            <div class="d-flex">
+                                <a href="{{ url('admin/Aboutus/show-content/'.$content->id) }}" class="btn btn-success view">View</a>
+                                <a href="{{ url('admin/Aboutus/edit-content/'.$content->id) }}" class="btn btn-success edit">Edit</a>
+                                <a href="{{ url('admin/Aboutus/delete-content/'.$content->id) }}" class="btn btn-danger delete">Delete</a>
+                            </div>
                         </td>
-                        <td>
-                            <span>{{ $content->title_myan }}</span>
-                            <p>{{ $content->sub_title_myan }}</p>
-                            <p>{{ $content->description_myan }}</p>
-                        </td>
-                        <td>
-                            <span>{{ $content->title_jp }}</span>
-                            <p>{{ $content->sub_title_jp }}</p>
-                            <p>{{ $content->description_jp }}</p>
-                        </td>
-                        <td><a href="{{ url('admin/Aboutus/edit-content/'.$content->id) }}" class="btn btn-success">Edit</a></td>
-                        <td><a href="{{ url('admin/Aboutus/delete-content/'.$content->id) }}" class="btn btn-danger">Delete</a></td>
                     </tr>
                 @endforeach
                 </tbody>

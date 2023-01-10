@@ -83,4 +83,10 @@ class ContactusController extends Controller
             return redirect('admin/Contactus/index')->with('message','No About Us Content Id Found');
         }
     }
+
+    Public function show($content_id)
+    {
+        $content = ContactUs::find($content_id);
+        return view('admin.Contactus.view',compact('content'));
+    }
 }

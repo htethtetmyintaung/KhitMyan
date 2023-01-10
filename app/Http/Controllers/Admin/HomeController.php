@@ -10,6 +10,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\Admin\HomeFormRequest;
+use App\Http\Requests\Admin\UpdateHomeFormRequest;
 
 class HomeController extends Controller
 {
@@ -57,7 +58,7 @@ class HomeController extends Controller
         return view('admin.Home.edit', compact('contents'));
     }
 
-    Public function update(HomeFormRequest $request, $content_id)
+    Public function update(UpdateHomeFormRequest $request, $content_id)
     {
         $data = $request->validated();
 
@@ -102,4 +103,9 @@ class HomeController extends Controller
         }
     }
 
+    Public function show($content_id)
+    {
+        $contents = Homecontents::find($content_id);
+        return view('admin.Home.view',compact('contents'));
+    }
 }

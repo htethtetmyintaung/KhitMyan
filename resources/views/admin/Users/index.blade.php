@@ -21,7 +21,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Role</th>
-                <th scope="col" colspan="3">Action</th>
+                <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,15 +31,19 @@
                     <td scope="row">{{$user->name}}</td>
                     <td>{{$user->email}}</td>
                     <td>
-                        <ul class="permission-name">
+                        <ul class="permission-name ">
                         @foreach($user->user_role as $role)
-                            <li>{{$role->name}}</li>
+                            <li class="text-align-center">{{$role->name}}</li>
                             @endforeach
                         </ul>
                     </td>
-                    <td><a href="{{url('admin/Users/show-content/'.$user->id)}}" class="btn btn-success">View</a></td>
-                    <td><a href="{{url('admin/Users/edit-content/'.$user->id)}}" class="btn btn-success">Edit</a></td>
-                    <td><a href="{{url('admin/Users/delete-content/'.$user->id)}}" class="btn btn-danger">Delete</a></td>
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{url('admin/Users/show-content/'.$user->id)}}" class="btn btn-success view">View</a>
+                            <a href="{{url('admin/Users/edit-content/'.$user->id)}}" class="btn btn-success edit">Edit</a>
+                            <a href="{{url('admin/Users/delete-content/'.$user->id)}}" class="btn btn-danger delete">Delete</a>
+                        </div>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

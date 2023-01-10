@@ -41,7 +41,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Description</label>
-                    <textarea name="image_description_en" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="image_description_en" id="img_desp_en_summernote" class="form-control" rows="4"></textarea>
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Title</label>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Description</label>
-                    <textarea name="description_en" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="description_en" id="desp_en_summernote" class="form-control" rows="4"></textarea>
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Description</label>
-                    <textarea name="image_description_my" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="image_description_my" id="img_desp_my_summernote" class="form-control" rows="4"></textarea>
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Title</label>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Description</label>
-                    <textarea name="description_my" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="description_my" id="desp_my_summernote" class="form-control" rows="4"></textarea>
                     </div>
                 </div>
                 
@@ -91,7 +91,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Description</label>
-                    <textarea name="image_description_ja" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="image_description_ja" id="img_desp_ja_summernote" class="form-control" rows="4"></textarea>
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Title</label>
@@ -103,7 +103,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Description</label>
-                    <textarea name="description_ja" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="description_ja" id="desp_ja_summernote" class="form-control" rows="4"></textarea>
                     </div>
                 </div>                
             </div>

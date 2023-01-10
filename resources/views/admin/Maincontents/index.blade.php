@@ -21,8 +21,7 @@
                 <th scope="col">English</th>
                 <th scope="col">Myanmar</th>
                 <th scope="col">Japan</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
+                <th scope="col" >Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,8 +31,9 @@
                     <td>{{ $content->title_en }}</td>
                     <td>{{ $content->title_my }}</td>
                     <td>{{ $content->title_ja }}</td>   
-                    <td><a href="{{ url('admin/Maincontents/edit-content/'.$content->id) }}" class="btn btn-success">Edit</a></td>
-                    <td><a href="{{ url('admin/Maincontents/delete-content/'.$content->id) }}" class="btn btn-danger">Delete</a></td>
+                    <td><a href="{{ url('admin/Maincontents/edit-content/'.$content->id) }}" class="btn btn-success edit">Edit</a>
+                        <a href="{{ url('admin/Maincontents/delete-content/'.$content->id) }}" class="btn btn-danger delete">Delete</a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

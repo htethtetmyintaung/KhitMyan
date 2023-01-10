@@ -38,7 +38,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Small</label>
-                    <input class="form-control" type="text" name="small_text_en" value="{{ $contents->small_text_en }}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="small_text_en" value="{{ old('small_text_en',$contents->small_text_en) }}" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Main</label>
@@ -50,7 +50,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Small</label>
-                    <input class="form-control" type="text" name="small_text_my" value="{{ $contents->small_text_my }}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="small_text_my" value="{{ old('small_text_my', $contents->small_text_my) }}" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Main</label>
@@ -62,7 +62,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Small</label>
-                    <input class="form-control" type="text" name="small_text_ja" value="{{ $contents->small_text_ja }}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="small_text_ja" value="{{ old('small_text_ja' , $contents->small_text_ja) }}" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Main</label>

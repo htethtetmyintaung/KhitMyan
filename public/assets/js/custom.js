@@ -38,22 +38,37 @@
   }
   });
 
-  //Summernote
+  //About Us Summernote
  
-  $(function() {
-    $("#makeMeSummernote").summernote();
-    $("button#btnToggleStyle").on("click", function(e) {
-      e.preventDefault();
-      var styleEle = $("style#fixed");
-      if (styleEle.length == 0)
-        $("<style id=\"fixed\">.note-editor .dropdown-toggle::after { all: unset; } .note-editor .note-dropdown-menu { box-sizing: content-box; } .note-editor .note-modal-footer { box-sizing: content-box; }</style>")
-        .prependTo("body");
-      else
-        styleEle.remove();
-    })
-  })
- 
- 
+  $(document).ready(function() {
+      $("#img_desp_en_summernote").summernote();
+      $('.dropdown-toggle').dropdown();
+  });
+
+  $(document).ready(function() {
+    $("#desp_en_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+
+  $(document).ready(function() {
+    $("#img_desp_my_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+
+  $(document).ready(function() {
+    $("#desp_my_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+
+  $(document).ready(function() {
+    $("#img_desp_ja_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+
+  $(document).ready(function() {
+    $("#desp_ja_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
 
   })(window.jQuery);
 

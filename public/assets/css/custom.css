@@ -47,3 +47,13 @@ table tbody tr td.map iframe{
   padding: 0;
   text-align: left;
 }
+
+.edit,
+.delete,
+.view {
+  margin: 0 5px;
+}
+
+.note-frame{
+  width: 100%;
+}

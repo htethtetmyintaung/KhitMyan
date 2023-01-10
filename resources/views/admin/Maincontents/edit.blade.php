@@ -39,7 +39,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Title Name</label>
-                    <input class="form-control" type="text" name="title_en" value="{{ $contents->title_en }}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="title_en" value="{{ old('title_en',$contents->title_en) }}" id="basicEmailInput" placeholder="">
                     </div>
                 </div>
 
@@ -48,7 +48,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Title Name</label>
-                    <input class="form-control" type="text" name="title_my" value="{{ $contents->title_my }}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="title_my" value="{{ old('title_en',$contents->title_my) }}" id="basicEmailInput" placeholder="">
                     </div>
                 </div>
                 
@@ -57,7 +57,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Title Name</label>
-                    <input class="form-control" type="text" name="title_ja" value="{{ $contents->title_ja }}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="title_ja" value="{{ old('title_en',$contents->title_ja) }}" id="basicEmailInput" placeholder="">
                     </div>
                 </div>                
             </div>

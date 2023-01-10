@@ -75,15 +75,15 @@
             
             <div class="form-group form-flex">
             <label for="basicEmailInput">Phone</label>
-            <input class="form-control" type="input" name="phone" value="{{$contents->phone}}" id="basicEmailInput" placeholder="">
+            <input class="form-control" type="input" name="phone" value="{{old('phone',$contents->phone)}}" id="basicEmailInput" placeholder="">
             </div>
             <div class="form-group form-flex">
             <label for="basicEmailInput">Email</label>
-            <input class="form-control" type="email" name="email" value="{{$contents->email}}" id="basicEmailInput" placeholder="">
+            <input class="form-control" type="email" name="email" value="{{old('email',$contents->email)}}" id="basicEmailInput" placeholder="">
             </div>
             <div class="form-group form-flex">
             <label for="basicEmailInput">Map</label>
-            <input class="form-control" type="text" name="map" value="{{$contents->map}}" id="basicEmailInput" placeholder="">
+            <textarea name="map" id="" cols="10" rows="5" class="w-100">{{$contents->map}}</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>

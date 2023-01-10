@@ -38,7 +38,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Title</label>
-                    <input class="form-control" type="text" name="image_title_en" value="{{$contents->image_title_en}}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="image_title_en" value="{{old('image_title_en',$contents->image_title_en)}}" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Description</label>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Title</label>
-                    <input class="form-control" type="text" name="title_en" value="{{$contents->title_en}}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="title_en" value="{{old('title_en',$contents->title_en)}}" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Sub-Title</label>
@@ -63,7 +63,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Title</label>
-                    <input class="form-control" type="text" name="image_title_my" value="{{$contents->image_title_my}}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="image_title_my" value="{{old('image_title_my',$contents->image_title_my)}}" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Description</label>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Title</label>
-                    <input class="form-control" type="text" name="title_my" value="{{$contents->title_my}}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="title_my" value="{{old('title_my',$contents->title_my)}}" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Sub-Title</label>
@@ -88,7 +88,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Title</label>
-                    <input class="form-control" type="text" name="image_title_ja" value="{{$contents->image_title_ja}}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="image_title_ja" value="{{old('image_title_ja',$contents->image_title_ja)}}" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Description</label>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Title</label>
-                    <input class="form-control" type="text" name="title_ja" value="{{$contents->title_ja}}" id="basicEmailInput" placeholder="">
+                    <input class="form-control" type="text" name="title_ja" value="{{old('title_ja',$contents->title_ja)}}" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Sub-Title</label>

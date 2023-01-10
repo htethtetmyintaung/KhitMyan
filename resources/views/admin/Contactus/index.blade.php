@@ -19,40 +19,31 @@
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th colspan="3">Title</th>
                     <th colspan="3" scope="col">Address</th>
-                    <th scope="col">Phone Number</th>
-                    <th scope="col">Email Address</th>
-                    <th scope="col">Map</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
+                    <th scope="col">Action</th>
                 </tr>
                 <tr>
                     <th></th>
                     <th>English</th>
                     <th>Myanmar</th>
                     <th>Japan</th>
-                    <th>English</th>
-                    <th>Myanmar</th>
-                    <th>Japan</th>
-                    <th colspan="5"></th>
+                    <th colspan="4"></th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach($contents as $content)
                 <tr>
                     <td scope="row">{{$content->id}}</td>
-                    <td>{{$content->title_en}}</td>
-                    <td>{{$content->title_my}}</td>
-                    <td>{{$content->title_ja}}</td>
                     <td>{{$content->address_en}}</td>
                     <td>{{$content->address_my}}</td>
                     <td>{{$content->address_ja}}</td>
-                    <td>{{$content->phone}}</td>
-                    <td>{{$content->email}}</td>
-                    <td class="map">{!! $content->map !!}</td>
-                    <td><a href="{{ url('admin/Contactus/edit-content/'.$content->id) }}" class="btn btn-success">Edit</a></td>
-                    <td><a href="{{ url('admin/Contactus/delete-content/'.$content->id) }}" class="btn btn-danger">Delete</a></td>
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ url('admin/Contactus/show-content/'.$content->id) }}" class="btn btn-success view">View</a>
+                            <a href="{{ url('admin/Contactus/edit-content/'.$content->id) }}" class="btn btn-success edit">Edit</a>
+                            <a href="{{ url('admin/Contactus/delete-content/'.$content->id) }}" class="btn btn-danger delete">Delete</a>
+                        </div>
+                    </td>
                 </tr>
                 @endforeach
                 </tbody>

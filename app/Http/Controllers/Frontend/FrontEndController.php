@@ -21,6 +21,9 @@ class FrontEndController extends Controller
             abort(404);
         }
         $contacts = ContactUs::first();
+        if (!$contacts) {
+            abort(404);
+        }
         return view('template.home.index', compact('contents','contacts','home_contents','about_contents'));
     }
 

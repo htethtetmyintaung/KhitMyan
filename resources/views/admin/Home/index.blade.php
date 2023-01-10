@@ -20,30 +20,29 @@
                 <th scope="col">English</th>
                 <th scope="col">Myanmar</th>
                 <th scope="col">Japan</th>
-                <th scope="col">Banner Image</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
+                <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
-            @foreach ($contents as $content)
+            @foreach ($contents as $key=>$content)
                 <tr>
-                <td scope="row">{{ $content->id }}</td>
+                <td scope="row">{{ ++$key }}</td>
                 <td>
-                    <span>{{ $content->small_text_en }}</span>
                     <p>{{ $content->banner_text_en }}</p>
                 </td>
                 <td>
-                    <span>{{ $content->small_text_my }}</span>
                     <p>{{ $content->banner_text_my }}</p>
                 </td>
                 <td>
-                    <span>{{ $content->small_text_ja }}</span>
                     <p>{{ $content->banner_text_ja }}</p>
                 </td>
-                <td><img src="{{ asset('uploads/home/'.$content->image) }}" width="100px" height="50px" alt="banner" srcset=""></td>
-                <td><a href="{{ url('admin/Home/edit-content/'.$content->id) }}" class="btn btn-success">Edit</a></td>
-                <td><a href="{{ url('admin/Home/delete-content/'.$content->id) }}" class="btn btn-danger">Delete</a></td>
+                <td>
+                    <div class="d-flex">
+                        <a href="{{ url('admin/Home/show-content/'.$content->id) }}" class="btn btn-success view">View</a>
+                        <a href="{{ url('admin/Home/edit-content/'.$content->id) }}" class="btn btn-success edit">Edit</a>
+                        <a href="{{ url('admin/Home/delete-content/'.$content->id) }}" class="btn btn-danger delete">Delete</a>
+                    </div>
+                </td>
                 </tr>
             @endforeach
             </tbody>

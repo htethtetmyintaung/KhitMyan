@@ -39,7 +39,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Title</label>
-                    <textarea name="title_en" id="" cols="30" rows="3" class="w-100"></textarea>
+                    <input class="form-control" type="text" name="title_en" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Address</label>
@@ -51,7 +51,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Title</label>
-                    <textarea name="title_my" id="" cols="30" rows="3" class="w-100"></textarea>
+                    <input class="form-control" type="text" name="title_my" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Address</label>
@@ -63,7 +63,7 @@
                     <hr>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Title</label>
-                    <textarea name="title_ja" id="" cols="30" rows="3" class="w-100"></textarea>
+                    <input class="form-control" type="text" name="title_ja" id="basicEmailInput" placeholder="">
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Address</label>
