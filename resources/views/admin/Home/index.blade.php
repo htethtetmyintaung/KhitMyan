@@ -28,13 +28,13 @@
                 <tr>
                 <td scope="row">{{ ++$key }}</td>
                 <td>
-                    <p>{{ $content->banner_text_en }}</p>
+                    <p>{!! \Illuminate\Support\Str::words($content->banner_text_en) !!}</p>
                 </td>
                 <td>
-                    <p>{{ $content->banner_text_my }}</p>
+                    <p>{!! \Illuminate\Support\Str::words($content->banner_text_my) !!}</p>
                 </td>
                 <td>
-                    <p>{{ $content->banner_text_ja }}</p>
+                    <p>{!! \Illuminate\Support\Str::words($content->banner_text_ja) !!}</p>
                 </td>
                 <td>
                     <div class="d-flex">

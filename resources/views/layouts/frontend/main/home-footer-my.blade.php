@@ -12,7 +12,7 @@
                         <div>
                             <h3>{{ $contacts->title_my }}</h3>
                             
-                            <h5 class="mb-4">{{ $contacts->address_my }}</h5>
+                            <h5 class="mb-4">{!! \Illuminate\Support\Str::words($contacts->address_my) !!}</h5>
 
                             <h4 class="mb-2">
                                 <a href="tel: 240-480-9600">

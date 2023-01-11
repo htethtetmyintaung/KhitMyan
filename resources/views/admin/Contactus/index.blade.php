@@ -34,9 +34,9 @@
                 @foreach($contents as $content)
                 <tr>
                     <td scope="row">{{$content->id}}</td>
-                    <td>{{$content->address_en}}</td>
-                    <td>{{$content->address_my}}</td>
-                    <td>{{$content->address_ja}}</td>
+                    <td>{!! \Illuminate\Support\Str::words($content->address_en) !!}</td>
+                    <td>{!! \Illuminate\Support\Str::words($content->address_my) !!}</td>
+                    <td>{!! \Illuminate\Support\Str::words($content->address_ja) !!}</td>
                     <td>
                         <div class="d-flex justify-content-center">
                             <a href="{{ url('admin/Contactus/show-content/'.$content->id) }}" class="btn btn-success view">View</a>

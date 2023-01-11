@@ -12,22 +12,37 @@
     <hr>
     <dl class="row">
         <dt class="col-sm-3">Role name</dt>
-        <dd class="col-sm-9">- {{$roles->name}}</dd>
+        <dd class="col-sm-9 d-flex">
+            <span class="mr-5">-</span>
+            <p>{{$roles->name}}</p>
+        </dd>
 
         <dt class="col-sm-3">Created by</dt>
-        <dd class="col-sm-9">- {{$roles->created_by}}</dd>
+        <dd class="col-sm-9 d-flex">
+            <span class="mr-5">-</span>
+            <p>{{$roles->created_by}}</p>
+        </dd>
 
         <dt class="col-sm-3">Created at</dt>
-        <dd class="col-sm-9">- {{$roles->created_at}}</dd>
+        <dd class="col-sm-9 d-flex">
+            <span class="mr-5">-</span>
+            <p>{{$roles->created_at}}</p>
+        </dd>
 
         <dt class="col-sm-3 text-truncate">Updated at</dt>
-        <dd class="col-sm-9">- {{$roles->updated_at}}</dd>
+        <dd class="col-sm-9 d-flex">
+            <span class="mr-5">-</span>
+            <p>{{$roles->updated_at}}</p>
+        </dd>
 
         <dt class="col-sm-3">Permissions</dt>
         <dd class="col-sm-9">
             <ul class="permission-name">
                 @foreach($roles->permission as $permission)
-                <li>- {{$permission->description}}</li>
+                <li class="d-flex">
+                    <span class="mr-5">-</span>
+                    <p>{{$permission->description}}</p>
+                </li>
                 @endforeach
             </ul>
         </dd>

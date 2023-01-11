@@ -16,7 +16,7 @@
                                 <div class="carousel-caption d-flex flex-column justify-content-center">
                                     <small class="small-title text-warning">{{$home_content->small_text_ja}} </small>
 
-                                    <h1>{{$home_content->banner_text_ja}}</h1>
+                                    <h1>{!! \Illuminate\Support\Str::words($home_content->banner_text_ja) !!}</h1>
 
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                         <div class="about-image-info">
                             <h4 class="text-white">{{ $about_contents->image_title_ja }}</h4>
 
-                            <p class="text-white mb-0">{{ $about_contents->image_description_ja }}</p>
+                            <p class="text-white mb-0">{!! \Illuminate\Support\Str::words($about_contents->image_description_ja) !!}</p>
                         </div>
                     </div>
 
@@ -71,7 +71,7 @@
 
                             <h5 class="mb-3">{{ $about_contents->sub_title_ja }}</h5>
 
-                            <p>{{ $about_contents->description_ja }}</p>
+                            <p>{!! \Illuminate\Support\Str::words($about_contents->description_ja, 10,'....') !!}</p>
                         </div>
                         <div class="projects-btn-wrap mt-4 seemore">
                             <a href="{{url('/about/ja')}}">

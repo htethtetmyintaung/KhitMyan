@@ -38,35 +38,58 @@
   }
   });
 
+  //Home Summernote
+  $(document).ready(function() {
+    $("#banner_text_en_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+  $(document).ready(function() {
+    $("#banner_text_my_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+  $(document).ready(function() {
+    $("#banner_text_ja_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+
   //About Us Summernote
  
   $(document).ready(function() {
       $("#img_desp_en_summernote").summernote();
       $('.dropdown-toggle').dropdown();
   });
-
   $(document).ready(function() {
     $("#desp_en_summernote").summernote();
     $('.dropdown-toggle').dropdown();
   });
-
   $(document).ready(function() {
     $("#img_desp_my_summernote").summernote();
     $('.dropdown-toggle').dropdown();
   });
-
   $(document).ready(function() {
     $("#desp_my_summernote").summernote();
     $('.dropdown-toggle').dropdown();
   });
-
   $(document).ready(function() {
     $("#img_desp_ja_summernote").summernote();
     $('.dropdown-toggle').dropdown();
   });
-
   $(document).ready(function() {
     $("#desp_ja_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+
+  //Contact Us Summernote
+  $(document).ready(function() {
+    $("#address_en_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+  $(document).ready(function() {
+    $("#address_my_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+  $(document).ready(function() {
+    $("#address_ja_summernote").summernote();
     $('.dropdown-toggle').dropdown();
   });
 

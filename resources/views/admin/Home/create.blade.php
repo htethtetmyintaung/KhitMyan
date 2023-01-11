@@ -9,7 +9,8 @@
         <h1 class="mt-4">Add Home Content</h1>
         <a href="{{ url('admin/Home/index') }}" class='btn btn-primary'>Go to Back</a>
         </div>
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <hr>
+        <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ENGLISH</button>
             </li>
@@ -42,7 +43,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Main</label>
-                    <textarea name="banner_text_en" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="banner_text_en" id="banner_text_en_summernote" class="form-control" rows="4"></textarea>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -54,7 +55,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Main</label>
-                    <textarea name="banner_text_my" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="banner_text_my" id="banner_text_my_summernote" class="form-control" rows="4"></textarea>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
@@ -66,7 +67,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Main</label>
-                    <textarea name="banner_text_ja" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="banner_text_ja" id="banner_text_ja_summernote" class="form-control" rows="4"></textarea>
                     </div>
                 </div>
             </div>

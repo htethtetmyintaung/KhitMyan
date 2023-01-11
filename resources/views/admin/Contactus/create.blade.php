@@ -13,13 +13,13 @@
 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ENGLISH</button>
+                <button class="nav-link active" id="english-tab" data-bs-toggle="tab" data-bs-target="#english" type="button" role="tab" aria-controls="english" aria-selected="true">ENGLISH</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">MYANMAR</button>
+                <button class="nav-link" id="myanmar-tab" data-bs-toggle="tab" data-bs-target="#myanmar" type="button" role="tab" aria-controls="myanmar" aria-selected="false">MYANMAR</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">JAPAN</button>
+                <button class="nav-link" id="japan-tab" data-bs-toggle="tab" data-bs-target="#japan" type="button" role="tab" aria-controls="contact" aria-selected="false">JAPAN</button>
             </li>
         </ul>
 
@@ -34,7 +34,7 @@
         <form action="{{ url('admin/Contactus/add-content') }}" method="POST" enctype="multipart/form-data">
         @csrf   
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade show active" id="english" role="tabpanel" aria-labelledby="english-tab">
                     <h3>Contact Us (English Language)</h3>
                     <hr>
                     <div class="form-group form-flex">
@@ -43,10 +43,10 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Address</label>
-                    <textarea name="address_en" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="address_en" id="address_en_summernote" cols="30" rows="5" class="form-control"></textarea>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="tab-pane fade" id="myanmar" role="tabpanel" aria-labelledby="myanmar-tab">
                 <h3>Contact Us (Myanmar Language)</h3>
                     <hr>
                     <div class="form-group form-flex">
@@ -55,10 +55,10 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Address</label>
-                    <textarea name="address_my" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="address_my" id="address_my_summernote" cols="30" rows="5" class="form-control"></textarea>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="tab-pane fade" id="japan" role="tabpanel" aria-labelledby="japan-tab">
                 <h3>Contact Us (Japan Language)</h3>
                     <hr>
                     <div class="form-group form-flex">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Address</label>
-                    <textarea name="address_ja" id="" cols="30" rows="5" class="w-100"></textarea>
+                    <textarea name="address_ja" id="address_ja_summernote" cols="30" rows="5" class="form-control"></textarea>
                     </div>
                 </div>
             </div>
