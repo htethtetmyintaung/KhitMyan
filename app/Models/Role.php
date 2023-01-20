@@ -5,6 +5,7 @@ use App\Models\Permission;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 class Role extends Model
 {
@@ -25,4 +26,6 @@ class Role extends Model
     {
         return $this->belongsToMany(User::class, 'roles_users','role_id','user_id');
     }
+
+   
 }

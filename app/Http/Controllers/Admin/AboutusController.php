@@ -16,7 +16,7 @@ class AboutusController extends Controller
 {
     Public function index()
     {
-        $contents = AboutUs::all();
+        $contents = AboutUs::paginate(5);
         return view('admin.Aboutus.index',compact('contents'));
     }
 

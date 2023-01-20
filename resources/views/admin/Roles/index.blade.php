@@ -2,6 +2,13 @@
 
 @section('title','Khit Myan')
 
+@php
+use App\Http\Controllers\Admin\UsersController;
+use App\Models\Permission;
+$permission = new Permission;
+@endphp
+
+
 @section('content')
 
     <div class="container-fluid px-4">
@@ -10,7 +17,11 @@
         @endif
         <div class='title-flex'>
         <h1 class="mt-4">Role</h1>
-        <a href="{{ url('admin/Roles/add-content') }}" class='btn btn-primary'>+ ADD Content</a>
+        @if($permission->checkPermission('Role create'))
+            <a href="{{ url('admin/Roles/add-content') }}" class="btn btn-primary"><i class="fa-solid fa-square-plus"></i>ADD</a>
+        @else
+            <a class="btn btn-primary"><i class="fas fa-exclamation-triangle"></i></a>
+        @endif
         </div>
         <hr>
 
@@ -39,15 +50,31 @@
                     <td>{{$role->created_at}}</td>
                     <td>
                         <div class="d-flex justify-content-center">
-                        <a href="{{url('admin/Roles/show-content/'.$role->id)}}" class="btn btn-success view">View</a>
-                        <a href="{{url('admin/Roles/edit-content/'.$role->id)}}" class="btn btn-success edit">Edit</a>
-                        <a href="{{url('admin/Roles/delete-content/'.$role->id)}}" class="btn btn-danger delete">Delete</a>
+                            @if($permission->checkPermission('Role view'))
+                                <a href="{{url('admin/Roles/show-content/'.$role->id)}}" class="btn btn-success view"><i class="fa-solid fa-eye"></i></a>
+                            @else
+                            <a class="btn btn-success view"><i class="fas fa-exclamation-triangle"></i></a>
+                            @endif
+
+                            @if($permission->checkPermission('Role edit'))
+                                <a href="{{url('admin/Roles/edit-content/'.$role->id)}}" class="btn btn-success edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                            @else
+                            <a class="btn btn-success edit"><i class="fas fa-exclamation-triangle"></i></a>
+                            @endif
+
+                            @if($permission->checkPermission('Role delete'))
+                                <a href="{{url('admin/Roles/delete-content/'.$role->id)}}" class="btn btn-danger delete"><i class="fa-solid fa-trash"></i></a>
+                            @else
+                            <a class="btn btn-danger delete"><i class="fas fa-exclamation-triangle"></i></a>
+                            @endif
                         </div>
                     </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
+
+        {!! $roles->links() !!}
     </div>
 
 @endsection

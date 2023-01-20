@@ -31,6 +31,7 @@ class UserRequest extends FormRequest
             ],
             'email' => [
                 'required',
+                'unique',
                 'string',
                 'max:200'
             ],

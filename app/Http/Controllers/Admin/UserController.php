@@ -10,13 +10,25 @@ use App\Models\Permission;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Admin\UserRequest;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Illuminate\Support\Collection;
+
 
 class UserController extends Controller
 {
     Public function index()
     {
-        $users = User::all();
+        $users = User::paginate(5);
         $roles = Role::all();
+        $permission = Permission::all();
+
+        // $data = auth()->user()->user_role()->first()->permission;
+        // $arrPermission = [];
+        // foreach($data as $value) 
+        // $arrPermission[] = $value->name;
+        // $collection = new Collection($arrPermission);
+        // dd($collection->contains("Permission create")); //check permissions
+
         return view('admin.Users.index',compact('users','roles'));
     }
 

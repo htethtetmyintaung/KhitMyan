@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Role;
 use App\Models\Permission;
+use Illuminate\Support\Collection;
 
 class User extends Authenticatable
 {
@@ -44,5 +45,6 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class, 'roles_users','user_id','role_id');
     }
+
 
 }

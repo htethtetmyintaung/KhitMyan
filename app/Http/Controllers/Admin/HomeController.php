@@ -16,7 +16,7 @@ class HomeController extends Controller
 {
     Public function index()
     {
-        $contents = Homecontents::all();
+        $contents = Homecontents::paginate(5);
         return view('admin.Home.index',compact('contents'));
     }
 

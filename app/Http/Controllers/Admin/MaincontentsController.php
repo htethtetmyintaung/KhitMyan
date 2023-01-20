@@ -13,7 +13,7 @@ class MaincontentsController extends Controller
 {
     Public function index()
     {
-        $contents = Maincontents::all();
+        $contents = Maincontents::paginate(5);
         return view('admin.Maincontents.index', compact('contents'));
     }
 

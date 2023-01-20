@@ -15,7 +15,7 @@ class ContactusController extends Controller
 {
     Public function index()
     {
-        $contents = ContactUs::all();
+        $contents = ContactUs::paginate(5);
         return view('admin.Contactus.index',compact('contents'));
     }
 

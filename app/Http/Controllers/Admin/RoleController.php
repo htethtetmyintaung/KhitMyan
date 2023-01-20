@@ -13,7 +13,7 @@ class RoleController extends Controller
 {
     Public function index()
     {
-        $roles = Role::all();
+        $roles = Role::paginate(5);
         $permissions = Permission::all();
         return view('admin.Roles.index',compact('roles','permissions'));
     }

@@ -4,6 +4,13 @@
 
 @section('content')
 
+@php
+use App\Http\Controllers\Admin\UsersController;
+use App\Models\Permission;
+$permission = new Permission;
+@endphp
+
+
     <div class="container-fluid px-4">
         <div class='title-flex'>
         <h1 class="mt-4">Add Permission</h1>

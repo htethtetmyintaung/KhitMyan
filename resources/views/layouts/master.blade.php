@@ -19,10 +19,11 @@
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/summernote.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/summernote-lite.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/fontawesome-6.2.1.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
 
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    
 </head>
 <body class="adminbody">
 
@@ -43,6 +44,7 @@
     <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('assets/js/summernote.min.js') }}"></script>
     <script src="{{ asset('assets/js/summernote-lite.min.js') }}"></script>
+    <script src="{{ asset('assets/js/fontawesome-6.2.1.js') }}" ></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script src="{{ asset('assets/js/script.js') }}"></script>
 </body>
