@@ -92,6 +92,18 @@
     $("#address_ja_summernote").summernote();
     $('.dropdown-toggle').dropdown();
   });
+  $(document).ready(function() {
+    $("#galleries_en_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+  $(document).ready(function() {
+    $("#galleries_my_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+  $(document).ready(function() {
+    $("#galleries_ja_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
 
   })(window.jQuery);
 

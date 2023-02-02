@@ -10,6 +10,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\Admin\ContactUsRequest;
+use App\Http\Requests\Admin\UpdateContactUsRequest;
 
 class ContactusController extends Controller
 {
@@ -51,7 +52,7 @@ class ContactusController extends Controller
         return view('admin.Contactus.edit',compact('contents'));
     }
 
-    Public function update(ContactUsRequest $request,$content_id)
+    Public function update(UpdateContactUsRequest $request,$content_id)
     {
         $data = $request->validated();
         $content = ContactUs::find($content_id);

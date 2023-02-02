@@ -40,6 +40,18 @@
             <span class="mr-5">-</span>
             <p>{{$permissions->description}}</p>
         </dd>
+
+        <dt class="col-sm-3">User of permission</dt>
+        <dd class="col-sm-9 d-flex">
+            <span class="mr-5">-</span>
+            <ul style="list-style:none;padding: 0px;">
+            @foreach($permissions->role as $role)
+                @foreach($role->user as $user)
+                        <li>{{$user->name}}</li>
+                @endforeach
+            @endforeach
+            </ul>
+        </dd>
     </dl>
 
 </div>

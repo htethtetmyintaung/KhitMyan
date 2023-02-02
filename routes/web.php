@@ -84,4 +84,11 @@ Route::prefix('admin')->middleware(['auth'])->group(function() {
     Route::get('/Users/delete-content/{content_id}',[App\Http\Controllers\Admin\UserController::class,'destroy']);
     Route::get('/Users/show-content/{content_id}',[App\Http\Controllers\Admin\UserController::class,'show']);
     
+    Route::get('/Galleries/index',[App\Http\Controllers\Admin\GalleriesController::class,'index']);
+    Route::get('/Galleries/add-content',[App\Http\Controllers\Admin\GalleriesController::class,'create']);
+    Route::post('/Galleries/add-content',[App\Http\Controllers\Admin\GalleriesController::class,'store']);
+    Route::get('/Galleries/edit-content/{content_id}',[App\Http\Controllers\Admin\GalleriesController::class,'edit']);
+    Route::put('/Galleries/update-content/{content_id}',[App\Http\Controllers\Admin\GalleriesController::class,'update']);
+    Route::get('/Galleries/delete-content/{content_id}',[App\Http\Controllers\Admin\GalleriesController::class,'destroy']);
+    Route::get('/Galleries/show-content/{content_id}',[App\Http\Controllers\Admin\GalleriesController::class,'show']);
 });

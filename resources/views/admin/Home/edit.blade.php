@@ -6,7 +6,7 @@
 
     <div class="container-fluid px-4">
         <div class='title-flex'>
-        <h1 class="mt-4">Add Home Content</h1>
+        <h1 class="mt-4">Edit Home Content</h1>
         <a href="{{ url('admin/Home/index') }}" class='btn btn-primary'>Go to Back</a>
         </div>
         <hr>

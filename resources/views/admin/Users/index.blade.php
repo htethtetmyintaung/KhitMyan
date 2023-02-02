@@ -16,12 +16,12 @@ $permission = new Permission;
             <div class="alert alert-success">{{ session('message') }}</div>
         @endif
         <div class='title-flex'>
-        <h1 class="mt-4">All Users</h1>
-        @if($permission->checkPermission('User create'))
-            <a href="{{ url('admin/Users/add-content') }}" class='btn btn-primary'><i class="fa-solid fa-square-plus"></i>ADD</a>
-        @else
-        <a class="btn btn-primary"><i class="fas fa-exclamation-triangle"></i></a>
-        @endif
+            <h1 class="mt-4">All Users</h1>
+            @if($permission->checkPermission('User create'))
+                <a href="{{ url('admin/Users/add-content') }}" class='btn btn-primary'><i class="fa-solid fa-square-plus"></i>ADD</a>
+            @else
+            <a class="btn btn-primary"><i class="fas fa-exclamation-triangle"></i></a>
+            @endif
         </div>
         <hr>
 

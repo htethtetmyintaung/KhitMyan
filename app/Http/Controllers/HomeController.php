@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Maincontents;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('layouts.master');
+        $contents = Maincontents::paginate(5);
+        return view('admin.Maincontents.index', compact('contents'));
     }
 }

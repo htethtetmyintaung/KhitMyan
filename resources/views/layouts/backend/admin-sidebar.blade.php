@@ -56,6 +56,12 @@
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="<?php echo url('admin/Galleries/index')?>">GALLERY</a>
+                    </nav>
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="#">Main GALLERY</a>
+                    </nav>
+                    <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="#">SUB GALLERY</a>
                     </nav>
                 </div>
