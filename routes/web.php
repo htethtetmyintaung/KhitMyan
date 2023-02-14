@@ -91,4 +91,12 @@ Route::prefix('admin')->middleware(['auth'])->group(function() {
     Route::put('/Galleries/update-content/{content_id}',[App\Http\Controllers\Admin\GalleriesController::class,'update']);
     Route::get('/Galleries/delete-content/{content_id}',[App\Http\Controllers\Admin\GalleriesController::class,'destroy']);
     Route::get('/Galleries/show-content/{content_id}',[App\Http\Controllers\Admin\GalleriesController::class,'show']);
+
+    Route::get('/Maingalleries/index',[App\Http\Controllers\Admin\MainGalleriesController::class,'index']);
+    Route::get('/Maingalleries/add-content',[App\Http\Controllers\Admin\MainGalleriesController::class,'create']);
+    Route::post('/Maingalleries/add-content',[App\Http\Controllers\Admin\MainGalleriesController::class,'store']);
+    Route::get('/Maingalleries/edit-content/{content_id}',[App\Http\Controllers\Admin\MainGalleriesController::class,'edit']);
+    Route::put('/Maingalleries/update-content/{content_id}',[App\Http\Controllers\Admin\MainGalleriesController::class,'update']);
+    Route::get('/Maingalleries/delete-content/{content_id}',[App\Http\Controllers\Admin\MainGalleriesController::class,'destroy']);
+    Route::get('/Maingalleries/show-content/{content_id}',[App\Http\Controllers\Admin\MainGalleriesController::class,'show']);
 });

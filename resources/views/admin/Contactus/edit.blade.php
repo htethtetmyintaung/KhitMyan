@@ -6,7 +6,7 @@
 
 <div class="container-fluid px-4">
         <div class='title-flex'>
-        <h1 class="mt-4">Add Contact Us</h1>
+        <h1 class="mt-4">Edit Contact Us</h1>
         <a href="{{url('admin/Contactus/index')}}" class='btn btn-primary'>Go to back</a>
         </div>
         <hr>

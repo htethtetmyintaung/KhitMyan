@@ -104,6 +104,18 @@
     $("#galleries_ja_summernote").summernote();
     $('.dropdown-toggle').dropdown();
   });
+  $(document).ready(function() {
+    $("#maingalleries_en_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+  $(document).ready(function() {
+    $("#maingalleries_my_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+  $(document).ready(function() {
+    $("#maingalleries_ja_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
 
   })(window.jQuery);
 

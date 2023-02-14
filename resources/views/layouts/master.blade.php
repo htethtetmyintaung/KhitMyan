@@ -46,6 +46,6 @@
     <script src="{{ asset('assets/js/summernote-lite.min.js') }}"></script>
     <script src="{{ asset('assets/js/fontawesome-6.2.1.js') }}" ></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-    <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
 </body>
 </html>

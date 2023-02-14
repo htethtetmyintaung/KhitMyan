@@ -11911,3 +11911,7 @@ backface-visibility: hidden;
   border-radius: 100px;
   color: #fff;
 }
+
+.top-logo {
+  width: 75%;
+}

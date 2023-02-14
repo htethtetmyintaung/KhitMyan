@@ -28,7 +28,7 @@
                 <img src="images/khitmyan/rsz_khitmyan-logo.jpg" class="w-100" alt="">
                 <h3>{{ $about_contents->sub_title_en }}</h3>
                 <p>
-                {{ $about_contents->description_en }}
+                {!! \Illuminate\Support\Str::words($about_contents->description_en) !!}
                 </p>
             </div>
         </div>
