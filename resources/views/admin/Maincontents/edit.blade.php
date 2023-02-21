@@ -41,6 +41,10 @@
                     <label for="basicEmailInput">Title Name</label>
                     <input class="form-control" type="text" name="title_en" value="{{ old('title_en',$contents->title_en) }}" id="basicEmailInput" placeholder="">
                     </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Link</label>
+                    <input class="form-control" type="text" name="link_en" value="{{ old('link_en',$contents->link_en) }}" id="basicEmailInput" placeholder="">
+                    </div>
                 </div>
 
                 <div class="tab-pane fade" id="myanmar" role="tabpanel" aria-labelledby="myanmar-tab">
@@ -50,6 +54,10 @@
                     <label for="basicEmailInput">Title Name</label>
                     <input class="form-control" type="text" name="title_my" value="{{ old('title_en',$contents->title_my) }}" id="basicEmailInput" placeholder="">
                     </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Link</label>
+                    <input class="form-control" type="text" name="link_my" value="{{ old('link_my',$contents->link_my) }}" id="basicEmailInput" placeholder="">
+                    </div>
                 </div>
                 
                 <div class="tab-pane fade" id="japan" role="tabpanel" aria-labelledby="japan-tab">
@@ -58,6 +66,10 @@
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Title Name</label>
                     <input class="form-control" type="text" name="title_ja" value="{{ old('title_en',$contents->title_ja) }}" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Link</label>
+                    <input class="form-control" type="text" name="link_ja" value="{{ old('link_ja',$contents->link_ja) }}" id="basicEmailInput" placeholder="">
                     </div>
                 </div>                
             </div>

@@ -41,6 +41,10 @@
                     <label for="basicEmailInput">Title Name</label>
                     <input class="form-control" type="text" name="title_en" id="basicEmailInput" placeholder="">
                     </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Link</label>
+                    <input class="form-control" type="text" name="link_en" id="basicEmailInput" placeholder="">
+                    </div>
                 </div>
 
                 <div class="tab-pane fade" id="myanmar" role="tabpanel" aria-labelledby="myanmar-tab">
@@ -50,6 +54,10 @@
                     <label for="basicEmailInput">Title Name</label>
                     <input class="form-control" type="text" name="title_my" id="basicEmailInput" placeholder="">
                     </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Link</label>
+                    <input class="form-control" type="text" name="link_my" id="basicEmailInput" placeholder="">
+                    </div>
                 </div>
                 
                 <div class="tab-pane fade" id="japan" role="tabpanel" aria-labelledby="japan-tab">
@@ -58,6 +66,10 @@
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Title Name</label>
                     <input class="form-control" type="text" name="title_ja" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Link</label>
+                    <input class="form-control" type="text" name="link_ja" id="basicEmailInput" placeholder="">
                     </div>
                 </div>                
             </div>

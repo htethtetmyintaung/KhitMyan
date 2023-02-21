@@ -16,10 +16,10 @@ class SubGalleries extends Model
         'image',
         'title_en',
         'title_my',
-        'title_jp',
+        'title_ja',
         'description_en',
         'description_my',
-        'description_jp',
+        'description_ja',
         'created_by'
     ];
 

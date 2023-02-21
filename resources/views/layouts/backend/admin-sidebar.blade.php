@@ -62,7 +62,7 @@
                         <a class="nav-link" href="<?php echo url('admin/Maingalleries/index')?>">Main GALLERY</a>
                     </nav>
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="#">SUB GALLERY</a>
+                        <a class="nav-link" href="<?php echo url('admin/Subgalleries/index')?>">SUB GALLERY</a>
                     </nav>
                 </div>
                 

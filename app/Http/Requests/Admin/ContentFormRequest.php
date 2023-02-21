@@ -39,6 +39,21 @@ class ContentFormRequest extends FormRequest
                 'string',
                 'max:200'
             ],
+            'link_en' => [
+                'required',
+                'string',
+                'max:200'
+            ],
+            'link_my' => [
+                'required',
+                'string',
+                'max:200'
+            ],
+            'link_ja' => [
+                'required',
+                'string',
+                'max:200'
+            ],
         ];
 
         return $rules;

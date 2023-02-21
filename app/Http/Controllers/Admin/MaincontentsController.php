@@ -30,6 +30,9 @@ class MaincontentsController extends Controller
         $content->title_en = $data['title_en'];
         $content->title_ja = $data['title_ja'];
         $content->title_my = $data['title_my'];
+        $content->link_en = $data['link_en'];
+        $content->link_my = $data['link_my'];
+        $content->link_ja = $data['link_ja'];
         $content->created_by = Auth::user()->id;
         $content->save();
 
@@ -51,6 +54,9 @@ class MaincontentsController extends Controller
         $content->title_en = $data['title_en'];
         $content->title_ja = $data['title_ja'];
         $content->title_my = $data['title_my'];
+        $content->link_en = $data['link_en'];
+        $content->link_my = $data['link_my'];
+        $content->link_ja = $data['link_ja'];
         $content->created_by = Auth::user()->id;
         $content->update();
 

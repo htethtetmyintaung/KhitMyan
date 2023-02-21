@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Galleries;
+use App\Models\Maincontents;
 use App\Http\Requests\Admin\GalleriesRequest;
 use App\Http\Requests\Admin\UpdateGalleriesRequest;
 
@@ -20,8 +21,8 @@ class GalleriesController extends Controller
 
     Public function create()
     {
-        $galleries = Galleries::all();
-        return view('admin.Galleries.create',compact('galleries'));
+        $main_contents = Maincontents::all();
+        return view('admin.Galleries.create',compact('main_contents'));
 
     }
 
@@ -29,6 +30,7 @@ class GalleriesController extends Controller
     {
         $data = $request->validated();
         $galleries = new Galleries;
+        $content->main_content_id = $data['main_content_id'];
         $galleries->title_en = $data['title_en'];
         $galleries->title_my = $data['title_my'];
         $galleries->title_ja = $data['title_ja'];

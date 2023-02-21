@@ -85,6 +85,15 @@
                 </div>
             </div>
 
+            <div class='form-group form-flex'>
+            <label for="basicSelect1">Select Main Content</label>
+            <select class='form-control' name="main_content_id" id='basicSelect1'>
+            @foreach ($main_contents as $main_content)
+            <option value="{{ $main_content->id }}" > {{$main_content->title_en}} </option>
+            @endforeach
+            </select>
+            </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 

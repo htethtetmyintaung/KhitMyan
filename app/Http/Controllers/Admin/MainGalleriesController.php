@@ -80,7 +80,7 @@ class MainGalleriesController extends Controller
 
             $file = $request->file('image');
             $filename = time().'.'.$file->getClientOriginalExtension();
-            $file->move('uploads/aboutus/', $filename);
+            $file->move('uploads/maingalleries/', $filename);
             $main_galleries->image = $filename;
         }
 
@@ -89,7 +89,7 @@ class MainGalleriesController extends Controller
 
         $main_galleries->galleries()->sync($request->main_gallery_id);
 
-        return redirect('admin/Maingalleries/index')->with('message','Content Added Successfully');
+        return redirect('admin/Maingalleries/index')->with('message','Content Updated Successfully');
     }
 
     Public function destroy($content_id)

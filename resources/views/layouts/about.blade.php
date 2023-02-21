@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,11 +12,11 @@
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/bootstrap-icons.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/tooplate-waso-strategy.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
     </head>
     
-    <body id="section_1">
+    <body id="aboutus" class="h-100">
 
 
         @include('layouts.frontend.about.navbar')

@@ -24,6 +24,10 @@ class GalleriesRequest extends FormRequest
     public function rules()
     {
         $rules = [
+            'main_content_id' => [
+                'nullable',
+                'integer'
+            ],
             'title_en' => [
                 'required',
                 'string',

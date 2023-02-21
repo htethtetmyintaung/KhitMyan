@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <section class="hero">
+    <section class="hero" id="ホーム">
         <div class="container-fluid h-100">
             <div class="row h-100">
 
@@ -43,7 +43,7 @@
     </section>
 
 
-    <section class="about section-padding" id="section_2">
+    <section class="about section-padding" id="コンテンツ">
         <div class="container">
         
             <div class="row">
@@ -89,5 +89,52 @@
      
         </div>
     </section>
+
+    @foreach ($main_galleries->galleries as $gallery)
+    <section class="projects section-padding pb-0" id="ギャラリー">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-12 text-center mx-auto mb-5">
+                    
+                    <small class="small-title">{{$gallery->title_ja}}</small>
+
+                    <h2>{{$gallery->sub_title_ja}}</h2>
+                    
+                </div>
+            </div>
+
+                    <div class="row grid-gallery">
+                        @foreach($galleries->main_galleries as $main_gallery)
+                        
+                            <div class="sub-grid-gallery">
+                                <div class="projects-thumb projects-thumb-small">
+                                    <a href="{{ url('/gallery/'.$main_gallery->id.'/ja') }}">
+                                        <img src="{{ asset('uploads/maingalleries/'.$main_gallery->image) }}" class="img-fluid projects-image" alt="">
+                                        
+                                        <div class="projects-info">
+                                            <div class="projects-title-wrap">
+                                                <small class="projects-small-title">{{$main_gallery->title_ja}}</small>
+
+                                                <h2 class="projects-title">{!! \Illuminate\Support\Str::words($main_gallery->description_ja) !!}</h2>
+                                            </div>
+
+                                            <div class="projects-btn-wrap mt-4">
+                                                <span class="custom-btn btn">
+                                                    <i class="bi-arrow-right"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        @endforeach
+                       
+                 </div>
+                
+            
+           
+        </div>
+    </section>
+    @endforeach
 
 @endsection

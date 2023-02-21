@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-12">
-                    <a href="index.html"> <strong>Home</strong> </a> 
+                    <a href="{{url('/ja')}}"> <strong>Home</strong> </a> 
                     <span>></span>
                     <span>About</span>
                 </div>
@@ -20,7 +20,7 @@
             </div>
 
             <div>
-                <h2 class="text-align-center">{{ $about_contents->title_ja }}</h2>
+                <h2 class="text-align-center">{!! $about_contents->title_ja !!}</h2>
                 <hr>
             </div>
 

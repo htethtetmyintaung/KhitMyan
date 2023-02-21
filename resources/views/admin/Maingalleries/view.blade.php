@@ -44,6 +44,15 @@
                     <span class="mr-5">-</span> 
                     <img src="{{ asset('uploads/maingalleries/'.$main_galleries->image) }}" width="200px" height="150px" alt="banner" srcset="">
                 </dd>
+
+                <dt class="col-sm-3">Related Gallery</dt>
+                <dd class="col-sm-9 d-flex">
+                    <span class="mr-5">-</span>
+                @foreach($main_galleries->galleries as $gallery)
+                    <p>{{$gallery->title_en}}</p>
+                @endforeach
+                </dd>
+
             </dl>
         </div>
         <div class="tab-pane fade" id="myanmar" role="tabpanel" aria-labelledby="myanmar-tab">
@@ -65,6 +74,15 @@
                     <span class="mr-5">-</span> 
                     <img src="{{ asset('uploads/maingalleries/'.$main_galleries->image) }}" width="200px" height="150px" alt="banner" srcset="">
                 </dd>
+
+                <dt class="col-sm-3">Related Gallery</dt>
+                <dd class="col-sm-9 d-flex">
+                    <span class="mr-5">-</span>
+                    @foreach($main_galleries->galleries as $gallery)
+                    <p>{{$gallery->title_my}}</p>
+                @endforeach
+                </dd>
+
             </dl>
         </div>
         <div class="tab-pane fade" id="japan" role="tabpanel" aria-labelledby="japan-tab">
@@ -85,6 +103,14 @@
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
                     <img src="{{ asset('uploads/maingalleries/'.$main_galleries->image) }}" width="200px" height="150px" alt="banner" srcset="">
+                </dd>
+
+                <dt class="col-sm-3">Related Gallery</dt>
+                <dd class="col-sm-9 d-flex">
+                    <span class="mr-5">-</span>
+                @foreach($main_galleries->galleries as $gallery)
+                    <p>{{$gallery->title_ja}}</p>
+                @endforeach
                 </dd>
             </dl>
         </div>

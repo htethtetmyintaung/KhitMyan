@@ -12,20 +12,20 @@
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/bootstrap-icons.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/tooplate-waso-strategy.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
     </head>
     
     <body id="section_1">
 
-    <div >
+   
 
         @include('layouts.frontend.main.navbar')
             <main>
                 @yield('content')
             </main>
             @include('layouts.frontend.main.home-footer')
-    </div>
+    
         <!-- JAVASCRIPT FILES -->
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>

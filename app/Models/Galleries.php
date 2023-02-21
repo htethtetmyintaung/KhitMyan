@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\MainGalleries;
+use App\Models\Maincontents;
 
 class Galleries extends Model
 {
@@ -13,6 +14,7 @@ class Galleries extends Model
     protected $table = 'galleries';
 
     protected $fillable = [
+        'main_content_id',
         'title_en',
         'title_my',
         'title_ja',
@@ -24,6 +26,11 @@ class Galleries extends Model
         'description_ja',
         'created_by'
     ];
+
+    public function homecontents() 
+    {
+        return $this->belongsTo(Maincontents::class);
+    }
 
     public function main_galleries() 
     {

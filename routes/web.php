@@ -23,7 +23,9 @@ Route::get('/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'jap
 Route::get('/about', [App\Http\Controllers\Frontend\FrontEndController::class, 'about']);
 Route::get('/about/my', [App\Http\Controllers\Frontend\FrontEndController::class, 'about_my']);
 Route::get('/about/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'about_ja']);
-
+Route::get('/gallery/{content_id}', [App\Http\Controllers\Frontend\FrontEndController::class, 'gallery']);
+Route::get('/gallery/{content_id}/my', [App\Http\Controllers\Frontend\FrontEndController::class, 'gallery_my']);
+Route::get('/gallery/{content_id}/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'gallery_ja']);
 
 
 Route::prefix('admin')->middleware(['auth'])->group(function() {
@@ -99,4 +101,12 @@ Route::prefix('admin')->middleware(['auth'])->group(function() {
     Route::put('/Maingalleries/update-content/{content_id}',[App\Http\Controllers\Admin\MainGalleriesController::class,'update']);
     Route::get('/Maingalleries/delete-content/{content_id}',[App\Http\Controllers\Admin\MainGalleriesController::class,'destroy']);
     Route::get('/Maingalleries/show-content/{content_id}',[App\Http\Controllers\Admin\MainGalleriesController::class,'show']);
+
+    Route::get('/Subgalleries/index',[App\Http\Controllers\Admin\SubGalleriesController::class,'index']);
+    Route::get('/Subgalleries/add-content',[App\Http\Controllers\Admin\SubGalleriesController::class,'create']);
+    Route::post('/Subgalleries/add-content',[App\Http\Controllers\Admin\SubGalleriesController::class,'store']);
+    Route::get('/Subgalleries/edit-content/{content_id}',[App\Http\Controllers\Admin\SubGalleriesController::class,'edit']);
+    Route::put('/Subgalleries/update-content/{content_id}',[App\Http\Controllers\Admin\SubGalleriesController::class,'update']);
+    Route::get('/Subgalleries/delete-content/{content_id}',[App\Http\Controllers\Admin\SubGalleriesController::class,'destroy']);
+    Route::get('/Subgalleries/show-content/{content_id}',[App\Http\Controllers\Admin\SubGalleriesController::class,'show']);
 });

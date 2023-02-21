@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Homecontents;
 use App\Models\AboutUs;
+use App\Models\Galleries;
 use App\Models\ContactUs;
 
 class Maincontents extends Model
@@ -18,6 +19,9 @@ class Maincontents extends Model
         'title_en',
         'title_ja',
         'title_my',
+        'link_en',
+        'link_my',
+        'link_ja',
         'created_by'
     ];
 
@@ -29,6 +33,11 @@ class Maincontents extends Model
     public function aboutus() 
     {
         return $this->hasMany(AboutUs::class,'main_content_id','id');
+    }
+
+    public function galleries() 
+    {
+        return $this->hasMany(Galleries::class,'main_content_id','id');
     }
 
     public function contactus() 

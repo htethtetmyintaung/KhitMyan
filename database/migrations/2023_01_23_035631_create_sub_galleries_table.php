@@ -18,10 +18,10 @@ class CreateSubGalleriesTable extends Migration
             $table->string('image');
             $table->string('title_en');
             $table->string('title_my');
-            $table->string('title_jp');
+            $table->string('title_ja');
             $table->text('description_en');
             $table->text('description_my');
-            $table->text('description_jp');
+            $table->text('description_ja');
             $table->integer('created_by');
             $table->timestamps();
         });

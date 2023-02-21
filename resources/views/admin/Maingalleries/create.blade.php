@@ -80,7 +80,7 @@
             </div> 
             </div>
             <div class='form-group form-flex'>
-            <label for="basicSelect1">Select Main Content</label>
+            <label for="basicSelect1">Select Gallery</label>
             <select class='form-control' name="main_gallery_id" id='basicSelect1'>
             @foreach ($galleries as $gallery)
             <option value="{{ $gallery->id }}" > {{$gallery->title_en}} </option>

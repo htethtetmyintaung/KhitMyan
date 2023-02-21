@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-12">
-                    <a href="index.html"> <strong>Home</strong> </a> 
+                    <a href="{{url('/my')}}"> <strong>Home</strong> </a> 
                     <span>></span>
                     <span>About</span>
                 </div>
@@ -28,7 +28,7 @@
                 <img src="images/khitmyan/rsz_khitmyan-logo.jpg" class="w-100" alt="">
                 <h3>{{ $about_contents->sub_title_my }}</h3>
                 <p>
-                {{ $about_contents->description_my }}
+                {!! $about_contents->description_my !!}
                 </p>
             </div>
         </div>
