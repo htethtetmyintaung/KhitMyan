@@ -42,7 +42,7 @@
                 <dt class="col-sm-3">Banner text</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($galleries->description_en) !!}}</p>
+                    <div>{!! $galleries->description_en !!}}</div>
                 </dd>
 
             </dl>
@@ -64,7 +64,7 @@
                 <dt class="col-sm-3">Banner text</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($galleries->description_my) !!}}</p>
+                    <div>{!! $galleries->description_my !!}}</div>
                 </dd>
             </dl>
         </div>
@@ -85,7 +85,7 @@
                 <dt class="col-sm-3">Banner text</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($galleries->description_ja) !!}}</p>
+                    <div>{!! $galleries->description_ja !!}}</div>
                 </dd>
             </dl>
         </div>

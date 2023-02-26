@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Main</label>
-                    <textarea name="banner_text_en" id="banner_text_en_summernote" class="form-control" rows="4">{{$contents->banner_text_en}}</textarea>
+                    <textarea name="banner_text_en" id="banner_text_en_summernote" class="form-control" rows="4">{!! $contents->banner_text_en !!}</textarea>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="myanmar" role="tabpanel" aria-labelledby="myanmar-tab">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Main</label>
-                    <textarea name="banner_text_my" id="banner_text_my_summernote" class="form-control" rows="4">{{$contents->banner_text_my}}</textarea>
+                    <textarea name="banner_text_my" id="banner_text_my_summernote" class="form-control" rows="4">{!! $contents->banner_text_my !!}</textarea>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="japan" role="tabpanel" aria-labelledby="japan-tab">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Banner Title Main</label>
-                    <textarea name="banner_text_ja" id="banner_text_ja_summernote" class="form-control" rows="4">{{$contents->banner_text_ja}}</textarea>
+                    <textarea name="banner_text_ja" id="banner_text_ja_summernote" class="form-control" rows="4">{!! $contents->banner_text_ja !!}</textarea>
                     </div>
                 </div>
             </div>

@@ -178,11 +178,8 @@ opacity: 1;
     justify-content: center;
     text-align: center;
     align-items: center;
+    margin-bottom: 25px;
 }
-.clients img {
-    width: 50%;
-}
-
   
   .lang-flag, .lang-list{
     cursor: pointer;
@@ -439,17 +436,6 @@ opacity: 1;
   width: calc(100% / 5 - 5px);
 }
 
-.clients {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-.clients img {
-  width: 50%;
-}
-
 
 .lang-flag, .lang-list{
   cursor: pointer;
@@ -462,19 +448,6 @@ backface-visibility: hidden;
 -webkit-backface-visibility: hidden;
 -moz-backface-visibility: hidden;
 -ms-backface-visibility: hidden;
-}
-
-.adminbody{
-  overflow: hidden;
-}
-.admincontents{
-  position: absolute;
-  overflow-y: scroll;
-  height: 100%;
-  width: 100%;
-}
-.tablescroll{
-  overflow: auto;
 }
 
 .custom-btn {

@@ -38,7 +38,7 @@
         <dt class="col-sm-3">Description</dt>
         <dd class="col-sm-9 d-flex">
             <span class="mr-5">-</span>
-            <p>{{$permissions->description}}</p>
+            <div>{!! $permissions->description !!}</div>
         </dd>
 
         <dt class="col-sm-3">User of permission</dt>

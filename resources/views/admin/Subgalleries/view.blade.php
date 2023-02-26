@@ -36,7 +36,7 @@
                 <dt class="col-sm-3">Description</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($sub_galleries->description_en) !!}</p>
+                    <div>{!! $sub_galleries->description_en !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Image</dt>
@@ -66,7 +66,7 @@
                 <dt class="col-sm-3">Description</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($sub_galleries->description_my) !!}</p>
+                    <div>{!! $sub_galleries->description_my !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Image</dt>
@@ -87,7 +87,7 @@
                 <dt class="col-sm-3">Description</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($sub_galleries->description_ja) !!}</p>
+                    <div>{!! $sub_galleries->description_ja !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Image</dt>

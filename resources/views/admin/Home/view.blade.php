@@ -35,7 +35,7 @@
                 <dt class="col-sm-3">Banner text</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($contents->banner_text_en) !!}</p>
+                    <div>{!! $contents->banner_text_en !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Banner image</dt>
@@ -56,7 +56,7 @@
                 <dt class="col-sm-3">Banner text</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($contents->banner_text_my) !!}</p>
+                    <div>{!! $contents->banner_text_my !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Banner image</dt>
@@ -77,7 +77,7 @@
                 <dt class="col-sm-3">Banner text</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($contents->banner_text_ja) !!}</p>
+                    <div>{!! $contents->banner_text_ja !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Banner image</dt>

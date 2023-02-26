@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Desciption</label>
-                    <textarea name="description_en" id="maingalleries_en_summernote" class="form-control" rows="4"></textarea>
+                    <textarea name="description_en" id="subgalleries_en_summernote" class="form-control" rows="4"></textarea>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="myanmar" role="tabpanel" aria-labelledby="myanmar-tab">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Desciption</label>
-                    <textarea name="description_my" id="maingalleries_my_summernote" class="form-control" rows="4"></textarea>
+                    <textarea name="description_my" id="subgalleries_my_summernote" class="form-control" rows="4"></textarea>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="japan" role="tabpanel" aria-labelledby="japan-tab">
@@ -68,7 +68,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Desciption</label>
-                    <textarea name="description_ja" id="maingalleries_ja_summernote" class="form-control" rows="4"></textarea>
+                    <textarea name="description_ja" id="subgalleries_ja_summernote" class="form-control" rows="4"></textarea>
                     </div>
                 </div>
             </div>

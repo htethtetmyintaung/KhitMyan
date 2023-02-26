@@ -8,9 +8,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-12">
-                    <a href="{{url('/my')}}"> <strong>Home</strong> </a> 
+                    <a href="{{url('/my')}}"> <strong>ပင်မစာမျက်နှာ</strong> </a> 
                     <span>></span>
-                    <span>About</span>
+                    <span>အကြောင်းအရာ</span>
                 </div>
                 <div class="col-lg-6 col-12 d-flex justify-content-end">
                     <a href="#">Facebook</a> 

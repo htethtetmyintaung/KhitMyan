@@ -35,7 +35,7 @@
                 <dt class="col-sm-3">Address</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{!! \Illuminate\Support\Str::words($content->address_en) !!}</p>
+                    <div>{!! $content->address_en !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Email Address</dt>
@@ -67,7 +67,7 @@
                 <dt class="col-sm-3">Address</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{!! \Illuminate\Support\Str::words($content->address_my) !!}</p>
+                    <div>{!! $content->address_my !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Email Address</dt>
@@ -100,7 +100,7 @@
                 <dt class="col-sm-3">Address</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{!! \Illuminate\Support\Str::words($content->address_ja) !!}</p>
+                    <div>{!! $content->address_ja !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Email Address</dt>

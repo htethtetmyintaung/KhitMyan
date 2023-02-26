@@ -71,7 +71,7 @@ class SubGalleriesController extends Controller
 
         if ($request->hasfile('image')) {
 
-            $destination = 'uploads/maingalleries/'.$sub_galleries->image;
+            $destination = 'uploads/subgalleries/'.$sub_galleries->image;
             if (File::exists($destination)) {
                 File::delete($destination);
             }

@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Description</label>
-                    <textarea name="image_description_en" id="img_desp_en_summernote" class="form-control" rows="4">{{$contents->image_description_en}}</textarea>
+                    <textarea name="image_description_en" id="img_desp_en_summernote" class="form-control" rows="4">{!! $contents->image_description_en !!}</textarea>
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Title</label>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Description</label>
-                    <textarea name="description_en" id="desp_en_summernote" class="form-control" rows="4">{{$contents->description_en}}</textarea>
+                    <textarea name="description_en" id="desp_en_summernote" class="form-control" rows="4">{!! $contents->description_en !!}</textarea>
                     </div>
                 </div>
 
@@ -68,7 +68,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Description</label>
-                    <textarea name="image_description_my" id="img_desp_my_summernote" class="form-control" rows="4">{{$contents->image_description_my}}</textarea>
+                    <textarea name="image_description_my" id="img_desp_my_summernote" class="form-control" rows="4">{!! $contents->image_description_my !!}</textarea>
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Title</label>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Description</label>
-                    <textarea name="description_my" id="desp_my_summernote" class="form-control" rows="4">{{$contents->description_my}}</textarea>
+                    <textarea name="description_my" id="desp_my_summernote" class="form-control" rows="4">{!! $contents->description_my !!}</textarea>
                     </div>
                 </div>
                 
@@ -93,7 +93,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Image Description</label>
-                    <textarea name="image_description_ja" id="img_desp_ja_summernote" class="form-control" rows="4">{{$contents->image_description_ja}}</textarea>
+                    <textarea name="image_description_ja" id="img_desp_ja_summernote" class="form-control" rows="4">{!! $contents->image_description_ja !!}</textarea>
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Title</label>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">About Us Description</label>
-                    <textarea name="description_ja" id="desp_ja_summernote" class="form-control" rows="4">{{$contents->description_ja}}</textarea>
+                    <textarea name="description_ja" id="desp_ja_summernote" class="form-control" rows="4">{!! $contents->description_ja !!}</textarea>
                     </div>
                 </div>                
             </div>

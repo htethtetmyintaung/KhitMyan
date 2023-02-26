@@ -41,7 +41,7 @@
                 <dt class="col-sm-3">Description of image</dt>
                 <dd class="col-sm-9 d-flex"> 
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($content->image_description_en) !!}</p>
+                    <div>{!! $content->image_description_en !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Title</dt>
@@ -59,7 +59,7 @@
                 <dt class="col-sm-3">Description</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($content->description_en) !!}</p>
+                    <div>{!! $content->description_en !!}</div>
                 </dd>
             </dl>
         </div>
@@ -74,13 +74,13 @@
                 <dt class="col-sm-3">Title of image</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{{ $content->image_title_my }}</p>
+                    <div>{{ $content->image_title_my }}</div>
                 </dd>
 
                 <dt class="col-sm-3">Description of image</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($content->image_description_my) !!}</p>
+                    <div>{!! $content->image_description_my !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Title</dt>
@@ -98,7 +98,7 @@
                 <dt class="col-sm-3">Description</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($content->description_my) !!}</p>
+                    <div>{!! $content->description_my !!}</div>
                 </dd>
             </dl>
         </div>
@@ -119,7 +119,7 @@
                 <dt class="col-sm-3">Description of image</dt>
                 <dd class="col-sm-9 d-flex"> 
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($content->image_description_ja) !!}</p>
+                    <div>{!! $content->image_description_ja !!}</div>
                 </dd>
 
                 <dt class="col-sm-3">Title</dt>
@@ -137,7 +137,7 @@
                 <dt class="col-sm-3">Description</dt>
                 <dd class="col-sm-9 d-flex"> 
                     <span class="mr-5">-</span> 
-                    <p>{!! \Illuminate\Support\Str::words($content->description_ja) !!}</p>
+                    <div>{!! $content->description_ja !!}</div>
                 </dd>
             </dl>
         </div>

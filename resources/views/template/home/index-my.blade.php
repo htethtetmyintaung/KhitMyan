@@ -42,7 +42,6 @@
         </div>
     </section>
 
-
     <section class="about section-padding" id="အကြောင်းအရာ">
         <div class="container">
         
@@ -89,6 +88,100 @@
         
         </div>
     </section>
+
+    <section class="services section-padding" id="ဝန်ဆောင်မှု">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-10 col-12 text-center mx-auto mb-5">
+                    <small class="small-title">{{ $service->title_my }}</small>
+
+                    <h2>{!! $service->description_my !!}</h2>
+
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <nav>
+                        <div class="nav nav-tabs flex-column align-items-baseline" id="nav-tab" role="tablist">
+                            <div class="nav-link active" id="nav-business-tab" data-bs-toggle="tab" data-bs-target="#nav-business" type="" role="tab" aria-controls="nav-business" aria-selected="true" style="width: 90%;">
+                                <h3>{{$mission->title_my}}</h3>
+
+                                <div>{{ Illuminate\Support\Str::limit(strip_tags($mission->description_my), 30) }}</div>
+                            </div>
+
+                            <div class="nav-link" id="nav-strategy-tab" data-bs-toggle="tab" data-bs-target="#nav-strategy" type="" role="tab" aria-controls="nav-strategy" aria-selected="false" style="width: 90%;">
+                                <h3>{{$vision->title_my}}</h3>
+                                
+                                <div>{!! \Illuminate\Support\Str::words(strip_tags($vision->description_my), 30) !!}</div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-business" role="tabpanel" aria-labelledby="nav-intro-tab">
+                            <img src="{{ asset('uploads/mission/cover/'.$mission->cover_image) }}" class="img-fluid w-100" alt="">
+
+                            <h5 class="mt-4 mb-2">{{$mission->subtitle_my}}</h5>
+
+                            <div>{!! Illuminate\Support\Str::limit(strip_tags($mission->description_my), 50) !!}</div>
+
+                            <div class="projects-btn-wrap mt-4 seemore">
+                                <a href="{{url('/mission/my')}}">
+                                    <span class="custom-btn btn ">
+                                        See More<i class="bi-arrow-right"></i>
+                                    </span>
+                                </a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade show" id="nav-strategy" role="tabpanel" aria-labelledby="nav-strategy-tab">
+                            <img src="{{ asset('uploads/vision/cover/'.$vision->cover_image) }}" class="img-fluid w-100" alt="">
+
+                            <h5 class="mt-4 mb-2">{{$vision->subtitle_my}}</h5>
+
+                            <div>{!! \Illuminate\Support\Str::words(strip_tags($vision->description_my), 50) !!}</div>
+
+                            <div class="projects-btn-wrap mt-4 seemore">
+                                <a href="event-detail.html">
+                                    <span class="custom-btn btn ">
+                                        See More<i class="bi-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- <div class="tab-pane fade show" id="nav-video" role="tabpanel" aria-labelledby="nav-video-tab">
+                            <img src="images/khitmyan/khitmyan05.jpg" class="img-fluid w-100" alt="">
+
+                            <h5 class="mt-4 mb-2">Events</h5>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore</p>
+                            <div class="projects-btn-wrap mt-4 seemore">
+                                <a href="event-detail.html">
+                                    <span class="custom-btn btn ">
+                                        See More Eng<i class="bi-arrow-right"></i>
+                                    </span>
+                                    <span class="custom-btn btn autoseemore">
+                                        See More Myan<i class="bi-arrow-right"></i>
+                                    </span>
+                                    <span class="custom-btn btn autoseemore">
+                                        See More Jp<i class="bi-arrow-right"></i>
+                                    </span>
+                                </a>
+                                
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
     @foreach ($main_galleries->galleries as $gallery)
     <section class="projects section-padding pb-0" id="မှတ်တမ်း">

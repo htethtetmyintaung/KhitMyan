@@ -47,5 +47,48 @@
     <script src="{{ asset('assets/js/fontawesome-6.2.1.js') }}" ></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
+
+    <script>
+        $(document).ready(function () {
+        var num = $('.property-fields__row').length;
+        if (num - 1 == 0)
+            $('#btnDel').attr('disabled', 'disabled');
+
+        $('#btnAdd').click(function () {
+
+            var num = $('.property-fields__row').length;
+            var newNum = num + 1;
+            var newElem = $('#property-fields__row-1').clone().attr('id', 'property-fields__row-' + newNum);
+
+
+            newElem.find('.line-item-property__year label').attr('for', 'year_' + newNum).val('');
+            newElem.find('.line-item-property__year input').attr('id', 'year_' + newNum).attr('name', 'slide_image[]').val('');
+
+
+            $('#property-fields__row-' + num).after(newElem);
+
+            $('#btnDel').attr('disabled', false);
+
+            if (newNum == 19)
+
+            $('#btnAdd').attr('disabled', 'disabled');
+
+        });
+
+        $('#btnDel').click(function () {
+            var num = $('.property-fields__row').length; 
+
+            $('#property-fields__row-' + num).remove();
+
+            $('#btnAdd').attr('disabled', false);
+
+            if (num - 1 == 1)
+
+            $('#btnDel').attr('disabled', 'disabled');
+
+        });
+        });
+
+    </script>
 </body>
 </html>

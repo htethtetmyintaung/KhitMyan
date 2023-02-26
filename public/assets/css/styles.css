@@ -11700,5 +11700,24 @@ body {
   border-radius: 0.25rem !important;
 }
 
+.adminbody{
+  overflow: hidden;
+}
+.admincontents{
+  position: absolute;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 30px;
+}
+.tablescroll{
+  overflow: auto;
+}
 
+.property-fields__row-item {
+  margin-bottom: 10px;
+}
 
+.slider-img li{
+  margin: 0 5px;
+}

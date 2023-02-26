@@ -23,6 +23,12 @@ Route::get('/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'jap
 Route::get('/about', [App\Http\Controllers\Frontend\FrontEndController::class, 'about']);
 Route::get('/about/my', [App\Http\Controllers\Frontend\FrontEndController::class, 'about_my']);
 Route::get('/about/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'about_ja']);
+Route::get('/mission', [App\Http\Controllers\Frontend\FrontEndController::class, 'mission']);
+Route::get('/mission/my', [App\Http\Controllers\Frontend\FrontEndController::class, 'mission_my']);
+Route::get('/mission/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'mission_ja']);
+Route::get('/vision', [App\Http\Controllers\Frontend\FrontEndController::class, 'vision']);
+Route::get('/vision/my', [App\Http\Controllers\Frontend\FrontEndController::class, 'vision_my']);
+Route::get('/vision/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'vision_ja']);
 Route::get('/gallery/{content_id}', [App\Http\Controllers\Frontend\FrontEndController::class, 'gallery']);
 Route::get('/gallery/{content_id}/my', [App\Http\Controllers\Frontend\FrontEndController::class, 'gallery_my']);
 Route::get('/gallery/{content_id}/ja', [App\Http\Controllers\Frontend\FrontEndController::class, 'gallery_ja']);
@@ -109,4 +115,36 @@ Route::prefix('admin')->middleware(['auth'])->group(function() {
     Route::put('/Subgalleries/update-content/{content_id}',[App\Http\Controllers\Admin\SubGalleriesController::class,'update']);
     Route::get('/Subgalleries/delete-content/{content_id}',[App\Http\Controllers\Admin\SubGalleriesController::class,'destroy']);
     Route::get('/Subgalleries/show-content/{content_id}',[App\Http\Controllers\Admin\SubGalleriesController::class,'show']);
+
+    Route::get('/Services/index',[App\Http\Controllers\Admin\ServiceController::class,'index']);
+    Route::get('/Services/add-content',[App\Http\Controllers\Admin\ServiceController::class,'create']);
+    Route::post('/Services/add-content',[App\Http\Controllers\Admin\ServiceController::class,'store']);
+    Route::get('/Services/edit-content/{content_id}',[App\Http\Controllers\Admin\ServiceController::class,'edit']);
+    Route::put('/Services/update-content/{content_id}',[App\Http\Controllers\Admin\ServiceController::class,'update']);
+    Route::get('/Services/delete-content/{content_id}',[App\Http\Controllers\Admin\ServiceController::class,'destroy']);
+    Route::get('/Services/show-content/{content_id}',[App\Http\Controllers\Admin\ServiceController::class,'show']);
+
+    Route::get('/Mission/index',[App\Http\Controllers\Admin\MissionController::class,'index']);
+    Route::get('/Mission/add-content',[App\Http\Controllers\Admin\MissionController::class,'create']);
+    Route::post('/Mission/add-content',[App\Http\Controllers\Admin\MissionController::class,'store']);
+    Route::get('/Mission/edit-content/{content_id}',[App\Http\Controllers\Admin\MissionController::class,'edit']);
+    Route::put('/Mission/update-content/{content_id}',[App\Http\Controllers\Admin\MissionController::class,'update']);
+    Route::get('/Mission/delete-content/{content_id}',[App\Http\Controllers\Admin\MissionController::class,'destroy']);
+    Route::get('/Mission/show-content/{content_id}',[App\Http\Controllers\Admin\MissionController::class,'show']);
+
+    Route::get('/Vision/index',[App\Http\Controllers\Admin\VisionController::class,'index']);
+    Route::get('/Vision/add-content',[App\Http\Controllers\Admin\VisionController::class,'create']);
+    Route::post('/Vision/add-content',[App\Http\Controllers\Admin\VisionController::class,'store']);
+    Route::get('/Vision/edit-content/{content_id}',[App\Http\Controllers\Admin\VisionController::class,'edit']);
+    Route::put('/Vision/update-content/{content_id}',[App\Http\Controllers\Admin\VisionController::class,'update']);
+    Route::get('/Vision/delete-content/{content_id}',[App\Http\Controllers\Admin\VisionController::class,'destroy']);
+    Route::get('/Vision/show-content/{content_id}',[App\Http\Controllers\Admin\VisionController::class,'show']);
+
+    Route::get('/Client/index',[App\Http\Controllers\Admin\ClientController::class,'index']);
+    Route::get('/Client/add-content',[App\Http\Controllers\Admin\ClientController::class,'create']);
+    Route::post('/Client/add-content',[App\Http\Controllers\Admin\ClientController::class,'store']);
+    Route::get('/Client/edit-content/{content_id}',[App\Http\Controllers\Admin\ClientController::class,'edit']);
+    Route::put('/Client/update-content/{content_id}',[App\Http\Controllers\Admin\ClientController::class,'update']);
+    Route::get('/Client/delete-content/{content_id}',[App\Http\Controllers\Admin\ClientController::class,'destroy']);
+    Route::get('/Client/show-content/{content_id}',[App\Http\Controllers\Admin\ClientController::class,'show']);
 });
