@@ -16,7 +16,7 @@
                                 <div class="carousel-caption d-flex flex-column justify-content-center">
                                     <small class="small-title text-warning">{{$home_content->small_text_ja}} </small>
 
-                                    <h1>{!! \Illuminate\Support\Str::words($home_content->banner_text_ja) !!}</h1>
+                                    <h1 class="header-text">{!! \Illuminate\Support\Str::words($home_content->banner_text_ja) !!}</h1>
 
                                 </div>
                             </div>
@@ -146,7 +146,7 @@
                             <div>{!! \Illuminate\Support\Str::words(strip_tags($vision->description_ja), 50) !!}</div>
 
                             <div class="projects-btn-wrap mt-4 seemore">
-                                <a href="event-detail.html">
+                                <a href="/vision/ja">
                                     <span class="custom-btn btn ">
                                         See More<i class="bi-arrow-right"></i>
                                     </span>

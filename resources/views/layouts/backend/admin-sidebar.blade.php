@@ -74,12 +74,12 @@
                 </div>
 
                 <!-- <div class="sb-sidenav-menu-heading">GALLERY</div> -->
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts-gallery" aria-expanded="false" aria-controls="collapseLayouts-gallery">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     GALLERY
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <div class="collapse" id="collapseLayouts-gallery" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="<?php echo url('admin/Galleries/index')?>">GALLERY</a>
                     </nav>
@@ -90,16 +90,28 @@
                         <a class="nav-link" href="<?php echo url('admin/Subgalleries/index')?>">SUB GALLERY</a>
                     </nav>
                 </div>
+
+                <!-- <div class="sb-sidenav-menu-heading">NEWS</div> -->
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-newspaper"></i></div>
+                    NEWS
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="<?php echo url('admin/NewsCategory/index')?>">News Category</a>
+                    </nav>
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="<?php echo url('admin/News/index')?>">News Item</a>
+                    </nav>
+                </div>
                 
                 <!-- <div class="sb-sidenav-menu-heading">Addons</div> -->
                 <a class="nav-link" href="#">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-calendar-days"></i></div>
                     EVENTS
                 </a>
-                <a class="nav-link" href="#">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-newspaper"></i></div>
-                    NEWS
-                </a>
+               
                 <a class="nav-link" href="<?php echo url('admin/Contactus/index')?>">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-address-book"></i></div>
                     CONTACT US

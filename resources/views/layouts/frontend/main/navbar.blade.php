@@ -21,13 +21,13 @@
          
 
             <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                English
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="{{url('/my')}}">Myanmar</a></li>
-                <li><a class="dropdown-item" href="{{url('/ja')}}">Japan</a></li>
-            </ul>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    English
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="{{url('/my')}}">Myanmar</a></li>
+                    <li><a class="dropdown-item" href="{{url('/ja')}}">Japan</a></li>
+                </ul>
             </div>
         </div>       
     </div>

@@ -16,7 +16,7 @@
                                 <div class="carousel-caption d-flex flex-column justify-content-center">
                                     <small class="small-title text-warning">{{$home_content->small_text_en}} </small>
 
-                                    <h1>{!! \Illuminate\Support\Str::words($home_content->banner_text_en) !!}</h1>
+                                    <h1 class="header-text">{!! \Illuminate\Support\Str::words($home_content->banner_text_en) !!}</h1>
 
                                 </div>
                             </div>
