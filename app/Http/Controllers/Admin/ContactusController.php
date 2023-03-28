@@ -37,9 +37,15 @@ class ContactusController extends Controller
         $content->address_en = $data['address_en'];
         $content->address_my = $data['address_my'];
         $content->address_ja = $data['address_ja'];
-        $content->phone = $data['phone'];
-        $content->email = $data['email'];
-        $content->map = $data['map'];
+        $content->phone_en = $data['phone_en'];
+        $content->phone_my = $data['phone_my'];
+        $content->phone_ja = $data['phone_ja'];
+        $content->email_en = $data['email_en'];
+        $content->email_my = $data['email_my'];
+        $content->email_ja = $data['email_ja'];
+        $content->map_en = $data['map_en'];
+        $content->map_my = $data['map_my'];
+        $content->map_ja = $data['map_ja'];
         $content->created_by = Auth::user()->id;
         $content->save();
 
@@ -62,9 +68,15 @@ class ContactusController extends Controller
         $content->address_en = $data['address_en'];
         $content->address_my = $data['address_my'];
         $content->address_ja = $data['address_ja'];
-        $content->phone = $data['phone'];
-        $content->email = $data['email'];
-        $content->map = $data['map'];
+        $content->phone_en = $data['phone_en'];
+        $content->phone_my = $data['phone_my'];
+        $content->phone_ja = $data['phone_ja'];
+        $content->email_en = $data['email_en'];
+        $content->email_my = $data['email_my'];
+        $content->email_ja = $data['email_ja'];
+        $content->map_en = $data['map_en'];
+        $content->map_my = $data['map_my'];
+        $content->map_ja = $data['map_ja'];
         $content->created_by = Auth::user()->id;
         $content->update();
 

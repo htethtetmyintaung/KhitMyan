@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @section('content')
 
@@ -41,7 +41,7 @@
                 <dt class="col-sm-3">Banner image</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <img src="{{ asset('uploads/home/'.$contents->image) }}" alt="banner" srcset="">
+                    <img src="{{ asset('uploads/home/'.$contents->image) }}" alt="banner" srcset="" width="300px">
                 </dd>
             </dl>
         </div>
@@ -62,7 +62,7 @@
                 <dt class="col-sm-3">Banner image</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <img src="{{ asset('uploads/home/'.$contents->image) }}" alt="banner" srcset="">
+                    <img src="{{ asset('uploads/home/'.$contents->image) }}" alt="banner" srcset="" width="300px">
                 </dd>
             </dl>
         </div>
@@ -83,7 +83,7 @@
                 <dt class="col-sm-3">Banner image</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span> 
-                    <img src="{{ asset('uploads/home/'.$contents->image) }}" alt="banner" srcset="">
+                    <img src="{{ asset('uploads/home/'.$contents->image) }}" alt="banner" srcset="" width="300px">
                 </dd>
             </dl>
         </div>

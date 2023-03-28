@@ -187,6 +187,20 @@
     $('.dropdown-toggle').dropdown();
   });
 
+  // News
+  $(document).ready(function() {
+    $("#news_desp_en_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+  $(document).ready(function() {
+    $("#news_desp_my_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+  $(document).ready(function() {
+    $("#news_desp_ja_summernote").summernote();
+    $('.dropdown-toggle').dropdown();
+  });
+
   })(window.jQuery);
 
 

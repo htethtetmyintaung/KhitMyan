@@ -16,9 +16,18 @@ use Illuminate\Support\Collection;
 
 class UserController extends Controller
 {
-    Public function index()
+    Public function index(Request $request)
     {
-        $users = User::paginate(5);
+        $keyword = $request->keyword;
+        $users = User::where(function($query) use ($keyword)
+        {
+            if ($keyword !=null) {
+                $query->where('name','LIKE','%'.$keyword.'%')
+                        ->orWhere('email','LIKE','%'.$keyword.'%')
+                        ->get();
+            }
+        })->paginate(5);
+        
         $roles = Role::all();
         $permission = Permission::all();
 

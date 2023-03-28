@@ -25,6 +25,7 @@ class ServiceRequest extends FormRequest
     {
         $rules = [
             'main_content_id' => [
+                'required',
                 'nullable',
                 'integer'
             ],

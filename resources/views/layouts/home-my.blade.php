@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="Tooplate">
 
-        <title>Khit Myan </title>
+        <title>JM UNITY</title>
 
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/bootstrap-icons.css') }}" rel="stylesheet">

@@ -22,9 +22,15 @@ class CreateContactUsTable extends Migration
             $table->text('address_en');
             $table->text('address_my');
             $table->text('address_ja');
-            $table->string('phone');
-            $table->string('email');
-            $table->text('map');
+            $table->string('phone_en');
+            $table->string('phone_my');
+            $table->string('phone_ja');
+            $table->string('email_en');
+            $table->string('email_my');
+            $table->string('email_ja');
+            $table->text('map_en');
+            $table->text('map_my');
+            $table->text('map_ja');
             $table->integer('created_by');
             $table->timestamps();
         });

@@ -10,6 +10,9 @@ use App\Models\Service;
 use App\Models\Mission;
 use App\Models\Vision;
 use App\Models\Client;
+use App\Models\News;
+use App\Models\Category;
+use App\Models\NewsItem;
 use App\Models\Galleries;
 use App\Models\MainGalleries;
 use App\Models\SubGalleries;
@@ -50,7 +53,20 @@ class FrontEndController extends Controller
         if (!$contacts) {
             abort(404);
         }
-        return view('template.home.index', compact('contents','contacts','home_contents','about_contents','service','mission','vision','galleries','main_galleries'));
+        
+        $news = News::first();
+        if(!$news) {
+            abort(404);
+        }
+        $categories = Category::all();
+        if(!$categories) {
+            abort(404);
+        }
+        $news_item = NewsItem::orderBy('created_at', 'DESC')->get();
+        if(!$news_item) {
+            abort(404);
+        }
+        return view('template.home.index', compact('contents','contacts','home_contents','about_contents','service','mission','vision','galleries','main_galleries','news','categories','news_item'));
     }
 
     public function myanmar()
@@ -63,8 +79,11 @@ class FrontEndController extends Controller
         $vision = Vision::first();
         $galleries = Galleries::first();
         $main_galleries = MainGalleries::first();
+        $news = News::first();
+        $categories = Category::all();
+        $news_item = NewsItem::orderBy('created_at', 'DESC')->get();
         $contacts = ContactUs::first();
-        return view('template.home.index-my', compact('contents','contacts','home_contents','about_contents','service','mission','vision','galleries','main_galleries'));
+        return view('template.home.index-my', compact('contents','contacts','home_contents','about_contents','service','mission','vision','galleries','main_galleries','news','categories','news_item'));
     }
 
     public function japan()
@@ -77,8 +96,11 @@ class FrontEndController extends Controller
         $vision = Vision::first();
         $galleries = Galleries::first();
         $main_galleries = MainGalleries::first();
+        $news = News::first();
+        $categories = Category::all();
+        $news_item = NewsItem::orderBy('created_at', 'DESC')->get();
         $contacts = ContactUs::first();
-        return view('template.home.index-ja', compact('contents','contacts','home_contents','about_contents','service','mission','vision','galleries','main_galleries'));
+        return view('template.home.index-ja', compact('contents','contacts','home_contents','about_contents','service','mission','vision','galleries','main_galleries','news','categories','news_item'));
     }
 
     public function about()
@@ -175,5 +197,106 @@ class FrontEndController extends Controller
         $contents = Maincontents::all();
         $galleries = Galleries::first();
         return view('template.gallery.detail-ja', compact('contents','galleries','main_galleries','sub_galleries'));
+    }
+
+    public function newslist()
+    {
+        $contents = Maincontents::all();
+        $news = News::first();
+        $categories = Category::with('category_news')->get();
+        $newlists = NewsItem::orderBy('created_at', 'DESC')->paginate(6);
+        return view('template.newslist.list', compact('contents','news','categories','newlists'));
+    }
+
+    public function newslist_my()
+    {
+        $contents = Maincontents::all();
+        $news = News::first();
+        $categories = Category::with('category_news')->get();
+        $newlists = NewsItem::orderBy('created_at', 'DESC')->paginate(6);
+        return view('template.newslist.list-my', compact('contents','news','categories','newlists'));
+    }
+
+    public function newslist_ja()
+    {
+        $contents = Maincontents::all();
+        $news = News::first();
+        $categories = Category::with('category_news')->get();
+        $newlists = NewsItem::orderBy('created_at', 'DESC')->paginate(6);
+        return view('template.newslist.list-ja', compact('contents','news','categories','newlists'));
+    }
+
+    public function news($content_id)
+    {
+        $contents = Maincontents::all();
+        $news_item = NewsItem::find($content_id);
+        $categories = Category::all();
+        $cat_item = $news_item->category;
+        $cat_id  = json_decode($cat_item,',');
+        foreach($cat_id as $d){
+            $name = $d['id'];
+            foreach ($categories as $category) {
+                if ($category->id == $name ) {
+                       
+                        $related_news = $category->category_news;
+                    
+                }
+            }
+        }
+
+        // $related = NewsItem::all();
+        // foreach ($related as $value) {
+        //     foreach ($value->category as $news_value) {
+        //         foreach ($categories as $category) {
+        //             if ($category->id == $news_value->id) {
+        //                 $related_news = $category->category_news;
+        //             }
+        //         }
+        //     }
+        // }
+        
+        return view('template.news.detail', compact('contents','news_item','categories','related_news'));
+    }
+
+    public function news_my($content_id){
+        $contents = Maincontents::all();
+        $news_item = NewsItem::find($content_id);
+        $categories = Category::all();
+        $cat_item = $news_item->category;
+        $cat_id  = json_decode($cat_item,',');
+        foreach($cat_id as $d){
+            $name = $d['id'];
+            foreach ($categories as $category) {
+                if ($category->id == $name ) {
+                       
+                        $related_news = $category->category_news;
+                    
+                }
+            }
+        }
+        
+        
+        return view('template.news.detail-my', compact('contents','news_item','categories','related_news'));
+    }
+
+    public function news_ja($content_id){
+        $contents = Maincontents::all();
+        $news_item = NewsItem::find($content_id);
+        $categories = Category::all();
+        $cat_item = $news_item->category;
+        $cat_id  = json_decode($cat_item,',');
+        foreach($cat_id as $d){
+            $name = $d['id'];
+            foreach ($categories as $category) {
+                if ($category->id == $name ) {
+                       
+                        $related_news = $category->category_news;
+                    
+                }
+            }
+        }
+        
+        
+        return view('template.news.detail-ja', compact('contents','news_item','categories','related_news'));
     }
 }

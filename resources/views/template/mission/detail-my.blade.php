@@ -1,6 +1,6 @@
 @extends('layouts.mission-my')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @section('content')
 

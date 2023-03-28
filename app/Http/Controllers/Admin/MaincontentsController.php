@@ -11,9 +11,19 @@ use Illuminate\Support\Facades\Auth;
 
 class MaincontentsController extends Controller
 {
-    Public function index()
+    Public function index(Request $request)
     {
-        $contents = Maincontents::paginate(5);
+        $keyword = $request->keyword;
+        $contents = Maincontents::where(function($query) use ($keyword)
+        {
+            if($keyword !=null){
+                $query->where('title_en','LIKE','%'.$keyword.'%')
+                        ->orWhere('title_my','LIKE','%'.$keyword.'%')
+                        ->orWhere('title_ja','LIKE','%'.$keyword.'%')->get();
+            }
+           
+        })
+        ->paginate(5);
         return view('admin.Maincontents.index', compact('contents'));
     }
 

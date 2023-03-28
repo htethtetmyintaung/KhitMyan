@@ -12,9 +12,17 @@ use App\Http\Requests\Admin\UpdateServiceRequest;
 
 class ServiceController extends Controller
 {
-    Public function index()
+    Public function index(Request $request)
     {
-        $contents = Service::paginate(5);
+        $keyword = $request->keyword;
+        $contents = Service::where(function($query) use ($keyword)
+        {
+            if ($keyword !=null) {
+                $query->where('category_en','LIKE','%'.$keyword.'%')
+                ->orWhere('category_my','LIKE','%'.$keyword.'%')
+                ->orWhere('category_ja','LIKE','%'.$keyword.'%')->get();
+            }
+        })->paginate(5);
         return view('admin.Services.index',compact('contents'));
     }
 

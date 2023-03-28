@@ -1,6 +1,6 @@
 @extends('layouts.about-ja')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @section('content')
 
@@ -28,7 +28,7 @@
                 <img src="images/khitmyan/rsz_khitmyan-logo.jpg" class="w-100" alt="">
                 <h3>{{ $about_contents->sub_title_ja }}</h3>
                 <p>
-                {{ $about_contents->description_ja }}
+                {!! $about_contents->description_ja !!}
                 </p>
             </div>
         </div>

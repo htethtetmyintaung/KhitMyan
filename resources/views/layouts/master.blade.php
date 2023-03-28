@@ -90,5 +90,48 @@
         });
 
     </script>
+
+    <script src="{{ asset('assets/js/sweetalert.min.js') }}"></script>
+    <script type="text/javascript">
+    
+        $('.show_confirm').click(function(event) {
+            var form =  $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                title: `Are you sure you want to delete this record?`,
+                text: "If you delete this, it will be gone forever.",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                form.submit();
+                }
+            });
+        });
+    
+    </script>
+
+    <script>
+        $(function(){
+            var current = location.pathname;
+            $('.admin-sidebar').each(function(){
+                var $this = $(this);
+                // if the current path is like this link, make it active
+                if($this.attr('href').indexOf(current) !== -1){
+                    $this.addClass('active');
+                }
+            })
+        })
+    </script>
+
+    <!-- <script>
+    function myFunction() {
+        if(!confirm("Are You Sure to delete this"))
+        event.preventDefault();
+    }
+    </script> -->
 </body>
 </html>

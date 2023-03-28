@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @section('content')
 
@@ -117,6 +117,7 @@
             <div class='form-group form-flex'>
             <label for="basicSelect1">Select Main Content</label>
             <select class='form-control' name="main_content_id" id='basicSelect1'>
+            <option value="">Select main content</option>
             @foreach ($main_contents as $main_content)
             <option value="{{ $main_content->id }}" > {{$main_content->title_en}} </option>
             @endforeach

@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @section('content')
 
@@ -229,5 +229,106 @@
     </section>
     @endforeach
 
+    <section class="news section-padding" id="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-12 text-center mx-auto mb-5">
+                    <small class="small-title">{{ $news->title_en }} </small>
+
+                    <h2>{!! $news->description_en !!}</h2>
+
+                </div>
+                <div class=" col-12 mx-auto">
+                    <div id="carouselExampleControls" class="carousel slide news-carousel carousel-dark d-none d-md-block" data-bs-ride="carousel">
+                        <div class="carousel-inner ">
+                        @foreach($news_item->chunk(3) as $newsCollections)
+                            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                <div class="card-wrapper">
+                                @foreach($newsCollections as $news_items)
+                                    <div class="card" >
+                                        <div class="image-wrapper w-100">
+                                            <img src="{{ asset('uploads/news/'.$news_items->image) }}"  alt="...">
+                                        </div>
+                                        <div class="card-body">
+                                            <a href="{{url('/news/'.$news_items->id)}}">
+                                                <h5 class="card-title">{{$news_items->title_en}}</h5>
+                                                <p class="card-text">{!! $news_items->description_en !!}</p>
+                                                <p>
+                                                    @foreach($news_items->category as $category)
+                                                    <span class="category">{{$category->name_en}}</span>
+                                                    @endforeach
+                                                    <span class="created-by">{{ $news_items->creator_en }}</span><br>
+                                                    <span class="date">Posted on: {{$news_items->created_at->format("Y-m-d")}}</span>
+                                                </p>
+                                                
+                                                <span class="btn btn-primary news-detail-link">More Detail<i class="bi-arrow-right"></i></span>
+                                                
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endforeach 
+                                </div>
+                            </div>
+                        @endforeach
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div id="carouselExampleControlsScreen" class="carousel slide news-md-carousel " data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                        @foreach($news_item->chunk(1) as $newsCollections)
+                            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                            @foreach($newsCollections as $news_items)  
+                                <div class="card">
+                                    <img src="{{ asset('uploads/news/'.$news_items->image) }}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                            <a href="{{url('/news/'.$news_items->id)}}">
+                                                <h5 class="card-title">{{$news_items->title_en}}</h5>
+                                                <p class="card-text">{!! $news_items->description_en !!}</p>
+                                                <p>
+                                                    @foreach($news_items->category as $category)
+                                                    <span class="category">{{$category->name_en}}</span>
+                                                    @endforeach
+                                                    <span class="created-by">{{ $news_items->creator_en }}</span><br>
+                                                    <span class="date">Posted on: {{$news_items->created_at->format("Y-m-d")}}</span>
+                                                </p>
+                                                
+                                                <span class="btn btn-primary news-detail-link">More Detail<i class="bi-arrow-right"></i></span>
+                                                
+                                            </a>
+                                        </div>
+                                </div>
+                            @endforeach
+                            </div>
+                        @endforeach
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsScreen" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsScreen" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div class="news-list">
+                        <a href="{{url('/newslist')}}">
+                        <span class="custom-btn btn ">
+                            See More News<i class="bi-arrow-right"></i>
+                        </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 @endsection

@@ -11,9 +11,17 @@ use App\Http\Requests\Admin\RoleRequest;
 
 class RoleController extends Controller
 {
-    Public function index()
+    Public function index(Request $request)
     {
-        $roles = Role::paginate(5);
+        $keyword = $request->keyword;
+        $roles = Role::where(function($query) use ($keyword)
+        {
+            if($keyword !=null){
+                $query->where('name','LIKE','%'.$keyword.'%')->get();
+            }
+           
+        })
+        ->paginate(5);
         $permissions = Permission::all();
         return view('admin.Roles.index',compact('roles','permissions'));
     }

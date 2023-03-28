@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @php
 use App\Http\Controllers\Admin\UsersController;
@@ -16,7 +16,7 @@ $permission = new Permission;
         @endif
         <div class='title-flex'>
         <h1 class="mt-4">Contact Us</h1>
-        @if($permission->checkPermission('Template create'))
+        @if($permission->checkPermission('Template create') && count($contents) == 0)
             <a href="{{url('admin/Contactus/add-content')}}" class='btn btn-primary'><i class="fa-solid fa-square-plus"></i>ADD</a>
         @else
             <a class="btn btn-primary"><i class="fas fa-exclamation-triangle"></i></a>
@@ -62,7 +62,12 @@ $permission = new Permission;
                         @endif  
 
                         @if($permission->checkPermission('Template delete'))
-                            <a href="{{ url('admin/Contactus/delete-content/'.$content->id) }}" class="btn btn-danger delete"><i class="fa-solid fa-trash"></i></a>
+                            <form method="POST" action="{{ url('admin/Contactus/delete-content/'.$content->id) }}">
+                                @csrf
+                                <input name="_method" type="hidden" value="DELETE">
+                                <button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                            <!-- <a href="{{ url('admin/Contactus/delete-content/'.$content->id) }}" class="btn btn-danger delete"><i class="fa-solid fa-trash"></i></a> -->
                         @else
                             <a class="btn btn-danger delete"><i class="fas fa-exclamation-triangle"></i></a>
                         @endif

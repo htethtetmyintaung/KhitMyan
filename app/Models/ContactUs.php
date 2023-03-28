@@ -20,9 +20,15 @@ class ContactUs extends Model
         'address_en',
         'address_my',
         'address_ja',
-        'phone',
-        'email',
-        'map',
+        'phone_en',
+        'phone_my',
+        'phone_ja',
+        'email_en',
+        'email_my',
+        'email_ja',
+        'map_en',
+        'map_my',
+        'map_ja',
         'created_by'
     ];
 

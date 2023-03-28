@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Homecontents;
 use App\Models\AboutUs;
 use App\Models\Service;
+use App\Models\News;
 use App\Models\Galleries;
 use App\Models\ContactUs;
 
@@ -39,6 +40,11 @@ class Maincontents extends Model
     public function service() 
     {
         return $this->hasMany(Service::class,'main_content_id','id');
+    }
+
+    public function news() 
+    {
+        return $this->hasMany(News::class,'main_content_id','id');
     }
 
     public function galleries() 

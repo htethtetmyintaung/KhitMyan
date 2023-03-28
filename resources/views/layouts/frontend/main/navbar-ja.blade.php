@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white shadow-lg">
     <div class="container">
 
-        <a href="{{url('/ja')}}" class="navbar-brand"><img src="{{asset('assets/images/rsz_khitmyan-logo.jpg')}}" class="top-logo" alt="" srcset=""></a>
+        <a href="{{url('/ja')}}" class="navbar-brand"><img src="{{asset('assets/images/jmugroup-logo.png')}}" class="top-logo w-100" alt="" srcset=""></a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,10 +22,10 @@
 
             <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Japanese
+                日本語
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="{{url('/my')}}">Myanmar</a></li>
+            <li><a class="dropdown-item" href="{{url('/my')}}">မြန်မာ</a></li>
                 <li><a class="dropdown-item" href="{{url('/')}}">English</a></li>
             </ul>
             </div>

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white shadow-lg">
     <div class="container">
 
-        <a href="{{url('/my')}}" class="navbar-brand"><img src="{{asset('assets/images/rsz_khitmyan-logo.jpg')}}" class="top-logo" alt="" srcset=""></a>
+        <a href="{{url('/my')}}" class="navbar-brand"><img src="{{asset('assets/images/jmugroup-logo.png')}}" class="top-logo" alt="" srcset=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

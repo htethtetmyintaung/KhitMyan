@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @section('content')
 
@@ -45,6 +45,18 @@
                     <label for="basicEmailInput">Address</label>
                     <textarea name="address_en" id="address_en_summernote" cols="30" rows="5" class="form-control"></textarea>
                     </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Phone</label>
+                    <input class="form-control" type="input" name="phone_en" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Email</label>
+                    <input class="form-control" type="email" name="email_en" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Map</label>
+                    <textarea name="map_en" id="" cols="30" rows="5" class="w-100"></textarea>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="myanmar" role="tabpanel" aria-labelledby="myanmar-tab">
                 <h3>Contact Us (Myanmar Language)</h3>
@@ -56,6 +68,18 @@
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Address</label>
                     <textarea name="address_my" id="address_my_summernote" cols="30" rows="5" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Phone</label>
+                    <input class="form-control" type="input" name="phone_my" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Email</label>
+                    <input class="form-control" type="email" name="email_my" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Map</label>
+                    <textarea name="map_my" id="" cols="30" rows="5" class="w-100"></textarea>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="japan" role="tabpanel" aria-labelledby="japan-tab">
@@ -69,24 +93,26 @@
                     <label for="basicEmailInput">Address</label>
                     <textarea name="address_ja" id="address_ja_summernote" cols="30" rows="5" class="form-control"></textarea>
                     </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Phone</label>
+                    <input class="form-control" type="input" name="phone_ja" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Email</label>
+                    <input class="form-control" type="email" name="email_ja" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Map</label>
+                    <textarea name="map_ja" id="" cols="30" rows="5" class="w-100"></textarea>
+                    </div>
                 </div>
             </div>
 
-            <div class="form-group form-flex">
-            <label for="basicEmailInput">Phone</label>
-            <input class="form-control" type="input" name="phone" id="basicEmailInput" placeholder="">
-            </div>
-            <div class="form-group form-flex">
-            <label for="basicEmailInput">Email</label>
-            <input class="form-control" type="email" name="email" id="basicEmailInput" placeholder="">
-            </div>
-            <div class="form-group form-flex">
-            <label for="basicEmailInput">Map</label>
-            <textarea name="map" id="" cols="30" rows="5" class="w-100"></textarea>
-            </div>
+           
             <div class='form-group form-flex'>
             <label for="basicSelect1">Select Main Content</label>
             <select class='form-control' name="main_content_id" id='basicSelect1'>
+            <option value="">Select main content</option>
             @foreach ($main_contents as $main_content)
             <option value="{{ $main_content->id }}" > {{$main_content->title_en}} </option>
             @endforeach

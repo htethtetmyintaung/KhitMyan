@@ -10,9 +10,17 @@ use Illuminate\Support\Facades\Auth;
 
 class PermissionController extends Controller
 {
-    Public function index()
+    Public function index(Request $request)
     {
-        $permissions = Permission::paginate(5);
+        $keyword = $request->keyword;
+        $permissions = Permission::where(function($query) use ($keyword)
+        {
+            if($keyword !=null){
+                $query->where('name','LIKE','%'.$keyword.'%')->get();
+            }
+           
+        })
+        ->paginate(5);
         return view('admin.Permissions.index', compact('permissions'));
     }
 

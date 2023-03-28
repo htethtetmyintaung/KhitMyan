@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests\Admin\SubGalleriesRequest;
 use App\Http\Requests\Admin\UpdateSubGalleriesRequest;
 use App\Models\SubGalleries;

@@ -13,9 +13,18 @@ use Illuminate\Support\Facades\File;
 
 class ClientController extends Controller
 {
-    Public function index()
+    Public function index(Request $request)
     {
-        $contents = Client::all();
+        $keyword = $request->keyword;
+        $contents = Client::where(function($query) use ($keyword)
+        {
+            if ($keyword !=null) {
+                $query->where('name_en','LIKE','%'.$keyword.'%')
+                        ->orWhere('name_my','LIKE','%'.$keyword.'%')
+                        ->orWhere('name_ja','LIKE','%'.$keyword.'%')
+                        ->get();
+            }
+        })->paginate(5);
         return view('admin.Client.index',compact('contents'));
     }
 

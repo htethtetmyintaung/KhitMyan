@@ -14,9 +14,18 @@ use App\Http\Requests\Admin\UpdateHomeFormRequest;
 
 class HomeController extends Controller
 {
-    Public function index()
+    Public function index(Request $request)
     {
-        $contents = Homecontents::paginate(5);
+        $keyword = $request->keyword;
+        $contents = Homecontents::where(function($query) use ($keyword)
+        {
+            if($keyword !=null){
+                $query->where('banner_text_en','LIKE','%'.$keyword.'%')
+                        ->orWhere('banner_text_my','LIKE','%'.$keyword.'%')
+                        ->orWhere('banner_text_ja','LIKE','%'.$keyword.'%')->get();
+            }
+           
+        })->paginate(5);
         return view('admin.Home.index',compact('contents'));
     }
 

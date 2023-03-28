@@ -34,15 +34,33 @@ class UpdateContactUsRequest extends FormRequest
             'address_en' => [],
             'address_my' => [],
             'address_ja' => [],
-            'phone' => [
+            'phone_en' => [
                 'string',
                 'max:200'
             ],
-            'email' => [
+            'phone_my' => [
                 'string',
                 'max:200'
             ],
-            'map' => []
+            'phone_ja' => [
+                'string',
+                'max:200'
+            ],
+            'email_en' => [
+                'string',
+                'max:200'
+            ],
+            'email_my' => [
+                'string',
+                'max:200'
+            ],
+            'email_ja' => [
+                'string',
+                'max:200'
+            ],
+            'map_en' => [],
+            'map_my' => [],
+            'map_ja' => [],
         ];
 
         return $rules;

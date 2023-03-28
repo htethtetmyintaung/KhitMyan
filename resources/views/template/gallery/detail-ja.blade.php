@@ -1,6 +1,6 @@
 @extends('layouts.gallery-ja')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @section('content')
 

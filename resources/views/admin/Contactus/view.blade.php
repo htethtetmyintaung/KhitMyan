@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @section('content')
 
@@ -41,19 +41,19 @@
                 <dt class="col-sm-3">Email Address</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{{ $content->email }}</p>
+                    <p>{{ $content->email_en }}</p>
                 </dd>
 
                 <dt class="col-sm-3">Phone Number</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{{ $content->phone }}</p>
+                    <p>{{ $content->phone_en }}</p>
                 </dd>
 
                 <dt class="col-sm-3">Map</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{!! $content->map !!}</p>
+                    <p>{!! $content->map_en !!}</p>
                 </dd>
             </dl>
         </div>
@@ -73,19 +73,19 @@
                 <dt class="col-sm-3">Email Address</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{{ $content->email }}</p>
+                    <p>{{ $content->email_my }}</p>
                 </dd>
 
                 <dt class="col-sm-3">Phone Number</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{{ $content->phone }}</p>
+                    <p>{{ $content->phone_my }}</p>
                 </dd>
 
                 <dt class="col-sm-3">Map</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{!! $content->map !!}</p>
+                    <p>{!! $content->map_my !!}</p>
                 </dd>
             </dl>
         </div>
@@ -106,19 +106,19 @@
                 <dt class="col-sm-3">Email Address</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{{ $content->email }}</p>
+                    <p>{{ $content->email_ja }}</p>
                 </dd>
 
                 <dt class="col-sm-3">Phone Number</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{{ $content->phone }}</p>
+                    <p>{{ $content->phone_ja }}</p>
                 </dd>
 
                 <dt class="col-sm-3">Map</dt>
                 <dd class="col-sm-9 d-flex">
                     <span class="mr-5">-</span>
-                    <p>{!! $content->map !!}</p>
+                    <p>{!! $content->map_ja !!}</p>
                 </dd>
             </dl>
         </div>

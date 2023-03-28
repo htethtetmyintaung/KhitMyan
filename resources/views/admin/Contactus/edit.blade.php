@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @section('content')
 
@@ -45,6 +45,18 @@
                     <label for="basicEmailInput">Address</label>
                     <textarea name="address_en" id="address_en_summernote" cols="30" rows="5" class="form-control">{{$contents->address_en}}</textarea>
                     </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Phone</label>
+                    <input class="form-control" type="input" name="phone_en" value="{{old('phone_en',$contents->phone_en)}}" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Email</label>
+                    <input class="form-control" type="email" name="email_en" value="{{old('email_en',$contents->email_en)}}" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Map</label>
+                    <textarea name="map_en" id="" cols="10" rows="5" class="w-100">{{$contents->map_en}}</textarea>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="myanmar" role="tabpanel" aria-labelledby="myanmar-tab">
                 <h3>Contact Us (Myanmar Language)</h3>
@@ -56,6 +68,18 @@
                     <div class="form-group form-flex">
                     <label for="basicEmailInput">Address</label>
                     <textarea name="address_my" id="address_my_summernote" cols="30" rows="5" class="form-control">{{$contents->address_my}}</textarea>
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Phone</label>
+                    <input class="form-control" type="input" name="phone_my" value="{{old('phone_my',$contents->phone_my)}}" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Email</label>
+                    <input class="form-control" type="email" name="email_my" value="{{old('email_my',$contents->email_my)}}" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Map</label>
+                    <textarea name="map_my" id="" cols="10" rows="5" class="w-100">{{$contents->map_my}}</textarea>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="japan" role="tabpanel" aria-labelledby="japan-tab">
@@ -69,22 +93,23 @@
                     <label for="basicEmailInput">Address</label>
                     <textarea name="address_ja" id="address_ja_summernote" cols="30" rows="5" class="form-control">{{$contents->address_ja}}</textarea>
                     </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Phone</label>
+                    <input class="form-control" type="input" name="phone_ja" value="{{old('phone_ja',$contents->phone_ja)}}" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Email</label>
+                    <input class="form-control" type="email" name="email_ja" value="{{old('email_ja',$contents->email_ja)}}" id="basicEmailInput" placeholder="">
+                    </div>
+                    <div class="form-group form-flex">
+                    <label for="basicEmailInput">Map</label>
+                    <textarea name="map_ja" id="" cols="10" rows="5" class="w-100">{{$contents->map_ja}}</textarea>
+                    </div>
                 </div>
             </div>
             </div>
             
-            <div class="form-group form-flex">
-            <label for="basicEmailInput">Phone</label>
-            <input class="form-control" type="input" name="phone" value="{{old('phone',$contents->phone)}}" id="basicEmailInput" placeholder="">
-            </div>
-            <div class="form-group form-flex">
-            <label for="basicEmailInput">Email</label>
-            <input class="form-control" type="email" name="email" value="{{old('email',$contents->email)}}" id="basicEmailInput" placeholder="">
-            </div>
-            <div class="form-group form-flex">
-            <label for="basicEmailInput">Map</label>
-            <textarea name="map" id="" cols="10" rows="5" class="w-100">{{$contents->map}}</textarea>
-            </div>
+            
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
 

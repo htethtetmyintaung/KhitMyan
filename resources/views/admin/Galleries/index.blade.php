@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title','Khit Myan')
+@section('title','JM UNITY')
 
 @php
 use App\Http\Controllers\Admin\UsersController;
@@ -34,7 +34,7 @@ $permission = new Permission;
         <tbody>
         @foreach ($galleries as $key=>$gallery)
             <tr>
-            <td scope="row">{{ ++$key }}</td>
+            <td scope="row">{!!  $galleries->firstItem() +$key!!}</td>
             <td>
                 <p>{{ $gallery->title_en }}</p>
             </td>
@@ -59,7 +59,12 @@ $permission = new Permission;
                     @endif  
 
                     @if($permission->checkPermission('Template delete'))
-                        <a href="{{ url('admin/Galleries/delete-content/'.$gallery->id) }}" class="btn btn-danger delete"><i class="fa-solid fa-trash"></i></a>
+                        <form method="POST" action="{{ url('admin/Galleries/delete-content/'.$gallery->id) }}">
+                            @csrf
+                            <input name="_method" type="hidden" value="DELETE">
+                            <button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete'><i class="fa-solid fa-trash"></i></button>
+                        </form>
+                        <!-- <a href="{{ url('admin/Galleries/delete-content/'.$gallery->id) }}" class="btn btn-danger delete"><i class="fa-solid fa-trash"></i></a> -->
                     @else
                     <a class="btn btn-danger delete"><i class="fas fa-exclamation-triangle"></i></a>
                     @endif  
